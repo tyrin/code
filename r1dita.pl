@@ -63,7 +63,7 @@ my @contents = <$inputfile>;
 	# close file
 	close($inputfile);
 	foreach my $line (@contents){
-		$line =~ s/#[.]*//g;
+		$line =~ s/ #[^%]*//g;
 		$line =~ s/\<code\>/\<codeph\>/g;
 		$line =~ s/\<\/code\>/\<\/codeph\>/g;
 		$line =~ s/\<br\>//g;

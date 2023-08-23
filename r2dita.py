@@ -59,7 +59,7 @@ print(f"templatePath={templatePath}")
 ############################# load files and create output file #############################
 
 #open RAML spec and read it in
-inputfile = open("final.raml", "r")
+inputfile = open(specPath, "r")
 data = inputfile.read()
 inputfile.close()
 
@@ -74,7 +74,7 @@ configdata = json.load(configfile)
 configfile.close()
 
 #create the output file
-outputfile = open("connectapi_resources.xml", "w")
+outputfile = open("./output/connectapi_resources.xml", "w")
 outputfile.write(templatedata)
 
 #Convert the yaml to a pdict
