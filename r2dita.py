@@ -1,4 +1,8 @@
 #!/usr/local/bin/perl
+# Author: Tyrin Avery 8/23
+# to run python3 r2dita.py -s specfile -t templatefile
+# defaults to python3 r2dita.py -s final.raml  -t startresource.xml
+# example python3 r2dita.py -s cdp-connect-api-RAML-59.0.raml
 import yaml
 import xmltodict
 import os
@@ -47,7 +51,7 @@ args = argParser.parse_args()
 #print("args=%s" % args)
 #print("args.type=%s" % args.type) 
 #print("args.specFile=%s" % args.specFile) 
-specPath = "./input/%s" % args.specFile
+specPath = "./output/%s" % args.specFile
 print(f"specPath={specPath}")
 templatePath = "./templates/%s" % args.templateFile
 print(f"templatePath={templatePath}")

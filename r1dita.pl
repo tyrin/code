@@ -1,13 +1,13 @@
 #!/usr/bin/perl 
    ##############################################################################################################
-#	r2dita.pl
+#	r1dita.pl
 #	========
 #
 #	Purpose:
-#		Generate DITA files from RAML spec
+#		Remove or convert markdown tags from RAML spec.
+# To run: perl r1dita.pl cdp-connect-api-RAML-59.0.raml
 #
-#
-# 	v 1.0 	- Written by Philip Sharman, 2023-08-02
+# 	v 1.0 	- Written by Tyrin Avery
 ##############################################################################################################
 use strict;
 use warnings 'FATAL' => 'all';
@@ -58,23 +58,18 @@ unless (open $outputfile, '+>',  $outputpath) {
    return undef
 }
 
-#sub processtags{
-#	my $v = shift;
-#	$v = s/\<code\>/\<codeph\>/;
-#	$v = s/\<code\>/\<codeph\>/;
-#	$v = s/\<\/code\>/\<\/codeph\>/;
-#	return $v;
-#}
 
 my @contents = <$inputfile>;
 	# close file
 	close($inputfile);
 	foreach my $line (@contents){
-		#my $lineout = processtags($line);
-		#print $outputfile "$lineout";
-		print "$line";
-		$line = s/\<code\>/\<codeph\>/;
-		print "line2: $line";
+		$line =~ s/#[.]*//g;
+		$line =~ s/\<code\>/\<codeph\>/g;
+		$line =~ s/\<\/code\>/\<\/codeph\>/g;
+		$line =~ s/\<br\>//g;
+		$line =~ s/\<\/br\>//g;
+		$line =~ s/[*]*//g;
+		print  $outputfile "$line";
 }
 
 #while( my $line = <$inputfile>)  {  
