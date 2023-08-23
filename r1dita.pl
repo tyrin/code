@@ -63,12 +63,13 @@ my @contents = <$inputfile>;
 	# close file
 	close($inputfile);
 	foreach my $line (@contents){
-		$line =~ s/ #[^%]*//g;
+		$line =~ s/^[\h]+#[^%]*//g; #remove comments after a space (this is so we don't remove the root element)
+		#$line =~ s/[\t]*#[^%]*//g; #remove comments after a space (this is so we don't remove the root element)
 		$line =~ s/\<code\>/\<codeph\>/g;
 		$line =~ s/\<\/code\>/\<\/codeph\>/g;
 		$line =~ s/\<br\>//g;
 		$line =~ s/\<\/br\>//g;
-		$line =~ s/[*]*//g;
+		#$line =~ s/[*]*//g;
 		print  $outputfile "$line";
 }
 
