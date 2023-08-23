@@ -1,0 +1,88 @@
+import yaml
+from yaml import SafeLoader
+from pprint import pprint
+import declxml as xml
+from collections import namedtuple
+#
+#
+#student = {
+#    'name':'Ravi',
+#    'age':21,
+#    'college':'Anna University'
+#}
+#print(student)
+#student_processor = xml.dictionary('Student', [
+#    xml.string('.', attribute='name'),
+#    xml.integer('.', attribute='age'),
+#    xml.string('college')
+#])
+#
+#print(xml.serialize_to_string(student_processor, student, indent='    '))
+#
+
+inputfile2 = open("cdp-simple.raml", "r")
+data2 = inputfile2.read()
+inputfile2.close()
+basedict=yaml.load(data2,Loader=SafeLoader)
+pprint(basedict)
+#pprint(basedict['annotationTypes'])
+#pprint(basedict['securitySchemes'])
+#<concept id="c360_a_enrichment_considerations" xml:lang="en-us">
+#title: Salesforce Connect API
+#version: '59.0'
+#mediaType: application/json
+#baseUri: /services/data/v59.0
+#<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+#<concept id="c360_a_enrichment_considerations" xml:lang="en-us">
+#Concept = namedtuple('Concept', ['id', 'xml'])
+#
+#
+#concept_processor = xml.named_tuple('concept', Concept, [
+#	xml.string(, 'id'),
+#	xml.integer("en-us", 'xml:lang')
+#])
+#xml.string('.', attribute='baseUri'),
+base_processor = xml.dictionary('concept', [
+    xml.string('title'),
+    xml.string('p', alias='version'),
+    xml.string('p', alias='mediaType'),
+    xml.string('p', alias='baseUri'),
+    xml.string('p', alias='version'),
+])
+base_processor1 = xml.dictionary('concept', [
+    xml.string('title'),
+    xml.string('version'),
+    xml.string('mediaType'),
+    xml.string('baseUri'),
+])
+print(xml.serialize_to_string(base_processor, basedict, indent='    '))
+
+
+----------------------------------r3dita.py
+import yaml
+from yaml import SafeLoader
+#to run: python3 r3dita.py
+from yaml import BaseLoader
+from yaml import FullLoader
+import xmltodict
+import numpy as np
+import pandas as pd
+import os
+import sys
+from dict2xml import dict2xml
+#open RAML spec and read it in
+inputfile = open("cdp-connect-api-RAML1-59.0.raml", "r")
+data = inputfile.read()
+inputfile.close()
+
+#Convert the yaml to a pdict
+fulldict=yaml.load(data,Loader=SafeLoader)
+# Converting Python Dictionary to XML
+#xml = dict2xml(data, wrap="all", indent="  ")
+#wrap is the tag
+xml = dict2xml.Converter(wrap="", indent=" ", newlines=True)
+print(xml)
+outputfile=open("raml.xml", 'w', encoding='utf-8')
+with open('raml.xml', 'w') as f:
+  f.write(str(xml))
+outputfile.close()w

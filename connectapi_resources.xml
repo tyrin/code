@@ -1,0 +1,2687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="connectAPI_resources" xml:lang="en-us">
+  <title>Apex Connect API Resources</title>
+  <shortdesc>Values for the <codeph otherprops="apex_code">ConnectApi</codeph>
+    namespace.</shortdesc>
+  <prolog>
+    <metadata>
+      <othermeta content="Apex_Code_Development_Deployment Chatter_REST_API" name="app_area"/>
+      <othermeta content="aloha mobile sfx" name="ui_platform"/>
+      <othermeta content="Developer" name="role"/>
+      <othermeta content="GE PE EE UE DE CE CSN DBCOM PXE" name="edition"/>
+      <othermeta content="concept" name="topic_type"/>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section>
+          <p>securedBy:<ph id="capi_securedBy"> ['OAuth2']</ph></p>
+      <p>title:<ph id="capi_title"> Salesforce Connect API</ph></p>
+      <p>version:<ph id="capi_version"> 59.0</ph></p>
+      <p>mediaType:<ph id="capi_mediaType"> application/json</ph></p>
+      <p>protocols:<ph id="capi_protocols"> ['https']</ph></p>
+      <p>baseUri:<ph id="capi_baseUri"> {dne_cdpInstanceUrl}/services/data/v{version}</ph></p>
+      <p>type:<ph id="capi_securitySchemes_OAuth2_type"> OAuth 2.0</ph></p>
+      <p>authorizationUri:<ph id="capi_securitySchemes_OAuth2_settings_authorizationUri"> https://example.com/oauth/authorize</ph></p>
+      <p>accessTokenUri:<ph id="capi_securitySchemes_OAuth2_settings_accessTokenUri"> </ph></p>
+      <p>authorizationGrants:<ph id="capi_securitySchemes_OAuth2_settings_authorizationGrants"> ['implicit']</ph></p>
+      <p>type:<ph id="capi_annotationTypes_oasreadOnly_type"> boolean</ph></p>
+      <p>allowedTargets:<ph id="capi_annotationTypes_oasreadOnly_allowedTargets"> TypeDeclaration</ph></p>
+      <p>type:<ph id="capi_annotationTypes_oascollectionFormat_type"> string</ph></p>
+      <p>type:<ph id="capi_annotationTypes_oasbodyname_type"> string</ph></p>
+      <p>allowedTargets:<ph id="capi_annotationTypes_oasbodyname_allowedTargets"> TypeDeclaration</ph></p>
+      <p>displayName:<ph id="capi_types_CdpActionResponseBaseRepresentation_displayName"> Data Cloud Action Response Base</ph></p>
+      <p>description:<ph id="capi_types_CdpActionResponseBaseRepresentation_description"> Cdp action result base</ph></p>
+      <p>type:<ph id="capi_types_CdpActionResponseBaseRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpActionResponseBaseRepresentation_properties_errors_description"> List of errors that resulted from the action.
+
+**Type:** Data Cloud Error[]
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpActionResponseBaseRepresentation_properties_errors_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpActionResponseBaseRepresentation_properties_errors_items_type"> CdpErrorRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpActionResponseBaseRepresentation_properties_success_description"> Indicates whether the call was successful (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpActionResponseBaseRepresentation_properties_success_type"> boolean</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_displayName"> Data Cloud Calculated Insight Collection Data</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_description"> Calculated insight collection data.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_count_description"> Number of results returned in the page.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_count_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_currentPageToken_description"> Token identifying the current page.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_currentPageToken_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_currentPageUrl_description"> Connect REST API URL identifying the current page.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_currentPageUrl_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_items_description"> List of calculated insights. 
+
+**Type:** Data Cloud Calculated Insight[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_items_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_items_items_type"> CdpCalculatedInsightRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_nextPageToken_description"> Token identifying the next page, or <code>null</code> if there isn't a next page.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_nextPageToken_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_nextPageUrl_description"> Connect REST API URL identifying the next page, or <code>null</code> if there isn't a next page.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_nextPageUrl_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_previousPageToken_description"> Token identifying the previous page, or <code>null</code> if there isn't a previous page. 
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_previousPageToken_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_previousPageUrl_description"> Connect REST API URL identifying the previous page, or <code>null</code> if there isn't a previous page.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_previousPageUrl_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_total_description"> Total row count of calculated insights.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionDataRepresentation_properties_total_type"> integer</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightCollectionRepresentation_displayName"> Data Cloud Calculated Insight Collection</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionRepresentation_description"> Container of a calculated insights page.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightCollectionRepresentation_properties_collection_description"> Collection of calculated insights.
+
+**Type:** Data Cloud Calculated Insight Collection Data
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightCollectionRepresentation_properties_collection_type"> CdpCalculatedInsightCollectionDataRepresentation</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_displayName"> Data Cloud Calculated Insight Data Source</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_description"> A calculated insight data source.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_properties_sourceApiName_description"> Source Api Name</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_properties_sourceApiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_properties_type_description"> Type</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDataSourceRepresentation_properties_type_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_displayName"> Data Cloud Calculated Insight Dimension</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_description"> A calculated insight dimension.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_apiName_description"> Api Name</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_apiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_creationType_description"> Creation Type</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_creationType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_dataSource_description"> Data Source</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_dataSource_type"> CdpCalculatedInsightDataSourceRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_dataType_description"> Data Type</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_dataType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_dateGranularity_description"> Date Granularity</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_dateGranularity_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_displayName_description"> Display Name</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_displayName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_fieldRole_description"> Field Role</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_fieldRole_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_formula_description"> Formula</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightDimensionRepresentation_properties_formula_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_displayName"> Data Cloud Calculated Insight Input</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_description"> Input representation for a calculated insight.
+
+**Root XML tag:** <code><cdpCalculatedInsightInput></code>
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_apiName_description"> API name of the calculated insight with suffix __cio.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_apiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_createdFromPackage_description"> Specifies whether the calculated insight was created from an installed package (<code>true</code>) or not (<code>false</code>).
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_createdFromPackage_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_dataSpaceName_description"> Name of the dataspace.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_dataSpaceName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_definitionType_description"> Definition type of the calculated insight. 
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_definitionType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_definitionType_enum"> ['CalculatedMetric', 'ExternalMetric', 'StreamingMetric']</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_description_description"> Calculated insight description.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_displayName_description"> Calculated insight display name.
+
+**Available Version:*** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_displayName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_draft_description"> Specifies whether to save the calculated insight as draft (<code>true</code>) or not (<code>false</code>)
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_draft_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_expression_description"> Calculated insight ANSI SQL expression.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_expression_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_packagedCalculatedInsightApiName_description"> API name of the packaged calculated insight.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_packagedCalculatedInsightApiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleEndDate_description"> Calculated insight publish schedule end date
+
+**Expected format:** yyyy-MM-dd
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleEndDate_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleInterval_description"> Calculated insight publish schedule interval notscheduled/six/twelve/twentyfour</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleInterval_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleInterval_enum"> ['ExternallyManaged', 'NotScheduled', 'Six', 'Streaming', 'SystemManaged', 'Twelve', 'TwentyFour']</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleStartDateTime_description"> Calculated insight publish schedule start date time
+
+**Expected format:** yyyy-MM-ddTHH:mm
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightInputRepresentation_properties_publishScheduleStartDateTime_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_displayName"> Data Cloud Calculated Insight Measure</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_description"> A calculated insight measure.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_apiName_description"> Api Name</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_apiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_creationType_description"> Creation Type</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_creationType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_dataSource_description"> Data Source</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_dataSource_type"> CdpCalculatedInsightDataSourceRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_dataType_description"> Data Type</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_dataType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_displayName_description"> Display Name</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_displayName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_fieldAggregationType_description"> Field Aggregation Type</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_fieldAggregationType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_fieldRole_description"> Field Role</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_fieldRole_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_formula_description"> Formula</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightMeasureRepresentation_properties_formula_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightRepresentation_displayName"> Data Cloud Calculated Insight</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_description"> A calculated insight.
+
+>**See Also**
+>
+>Data Cloud Calculated Insight Collection Data
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_apiName_description"> API name of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_apiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_calculatedInsightStatus_description"> Status of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_calculatedInsightStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_creationType_description"> Creation type of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_creationType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_dataSpace_description"> Data space of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_dataSpace_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_definitionStatus_description"> Definition status of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_definitionStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_definitionType_description"> Definition type of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_definitionType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_description_description"> Description of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_dimensions_description"> Dimensions of the calculated insight.
+
+**Type:** Data Cloud Calculated Insight Dimension[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_dimensions_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_dimensions_items_type"> CdpCalculatedInsightDimensionRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_displayName_description"> Display name of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_displayName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_expression_description"> Expression of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_expression_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_isEnabled_description"> Specifies whether the calculated insight is enabled (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_isEnabled_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastCalcInsightStatusDateTime_description"> Last calculated insight status date and time.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastCalcInsightStatusDateTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastCalcInsightStatusErrorCode_description"> Last calculated insight status error code.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastCalcInsightStatusErrorCode_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunDateTime_description"> Last run date and time of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunDateTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunStatus_description"> Last run status of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunStatusDateTime_description"> Last run status date and time of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunStatusDateTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunStatusErrorCode_description"> Last run status error code of the calculated insight.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_lastRunStatusErrorCode_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_measures_description"> Measures of the calculated insight.
+
+**Type:** Data Cloud Calculated Insight Measure[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_measures_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_measures_items_type"> CdpCalculatedInsightMeasureRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_publishScheduleEndDate_description"> Publish schedule end date. 
+
+**Expected format:** yyyy-MM-dd
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_publishScheduleEndDate_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_publishScheduleInterval_description"> Publish schedule interval.
+  - <code>NOT_SCHEDULED</code>
+  - <code>SIX</code>
+  - <code>TWELVE</code>
+  - <code>TWENTY_FOUR</code>
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_publishScheduleInterval_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_publishScheduleStartDateTime_description"> Publish schedule start date and time. 
+
+**Expected format:** yyyy-MM-ddTHH:mm
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightRepresentation_properties_publishScheduleStartDateTime_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_displayName"> Data Cloud Calculated Insight Standard Action Response</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_description"> Response of the calculated insight run action.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_type"> CdpActionResponseBaseRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_properties_errors_description"> List of errors that resulted from the action.
+
+**Type:** Data Cloud Error[]
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_properties_errors_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_properties_errors_items_type"> CdpErrorRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_properties_success_description"> Indicates whether the call was successful (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightStandardActionResponseRepresentation_properties_success_type"> boolean</ph></p>
+      <p>displayName:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_displayName"> Data Cloud Calculated Insight Validate Input</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_description"> Validation input representation for a Calculated Insight.</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_createdFromPackage_description"> Flag to identify the ci creation thru package. If true, the ci is created from a installed package</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_createdFromPackage_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_dataSpaceName_description"> Dataspace Name</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_dataSpaceName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_definitionType_description"> Calculated insight definition type standard/streaming/external</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_definitionType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_definitionType_enum"> ['CalculatedMetric', 'ExternalMetric', 'StreamingMetric']</ph></p>
+      <p>description:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_expression_description"> Calculated insight ansi sql statement/expression</ph></p>
+      <p>type:<ph id="capi_types_CdpCalculatedInsightValidateInputRepresentation_properties_expression_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpErrorRepresentation_displayName"> Data Cloud Error</ph></p>
+      <p>description:<ph id="capi_types_CdpErrorRepresentation_description"> Error response.</ph></p>
+      <p>type:<ph id="capi_types_CdpErrorRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpErrorRepresentation_properties_errorCode_description"> Error code.
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpErrorRepresentation_properties_errorCode_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpErrorRepresentation_properties_message_description"> Message stating the reason for error, if any.
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpErrorRepresentation_properties_message_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionConfigInput_displayName"> Data Cloud Identity Resolution Config Input</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_description"> Input representation for creating a CDP Identity Resolution</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_configurationType_description"> Identity Resolution type</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_configurationType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_configurationType_enum"> ['Account', 'Individual']</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_dataSpaceName_description"> Data Space developer name</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_dataSpaceName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_description_description"> Description</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_doesRunAutomatically_description"> Run automatically</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_doesRunAutomatically_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_label_description"> Label</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_label_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_matchRules_description"> Match rules</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_matchRules_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_matchRules_items_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_reconciliationRules_description"> Reconciliation rules</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_reconciliationRules_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_reconciliationRules_items_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_rulesetId_description"> Ruleset Id</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigInput_properties_rulesetId_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_displayName"> Data Cloud Identity Resolution Config Patch Input</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_description"> Input representation for updating a CDP identity resolution.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_description_description"> Description of the identity resolution ruleset.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_doesRunAutomatically_description"> Specifies whether automatic job run scheduling is enabled for the ruleset (<code>true</code>) or not (<code>false</code>). If unspecified, defaults to <code>false</code>.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_doesRunAutomatically_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_label_description"> User friendly name of the identity resolution ruleset.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_label_type"> string</ph></p>
+      <p>required:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_label_required"> True</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_matchRules_description"> List of match rules for the identity resolution ruleset.
+
+**Type:** Data Cloud Identity Resolution Match Rule Input[]
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_matchRules_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_matchRules_items_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_reconciliationRules_description"> List of reconciliation rules for the identity resolution ruleset.
+
+**Type:** Data Cloud Identity Resolution Rule Input[]
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_reconciliationRules_type"> array</ph></p>
+      <p>required:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_reconciliationRules_required"> True</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionConfigPatchInput_properties_reconciliationRules_items_type"> object</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_displayName"> Data Cloud Identity Resolution Match Criterion Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_description"> Identity resolution ruleset match rule criterion.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_caseSensitiveMatch_description"> Specifies whether the criterion match is case sensitive (<code>true</code>) or not (<code>false</code>). Available only when matching is based on the [party identifier](https://help.salesforce.com/s/articleView?id=sf.c360_a_partyidentifier.htm&type=5).
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_caseSensitiveMatch_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_entityName_description"> API name of the Data Model Object the match rule applies to.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_entityName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_fieldName_description"> Name of the field the criterion applies to.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_fieldName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_matchMethodType_description"> Match method for a match rule criterion.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_matchMethodType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_matchMethodType_enum"> ['Exact', 'ExactNormalized', 'Fuzzy', 'FuzzyHigh', 'FuzzyLow']</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_partyIdentificationInfo_description"> Party Identification information.
+
+**Type:** Data Cloud Identity Resolution Match Criterion Party Identification Info Output
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_partyIdentificationInfo_type"> CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_shouldMatchOnBlank_description"> Specifies whether blank fields can be used for matching (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionOutput_properties_shouldMatchOnBlank_type"> boolean</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_displayName"> Data Cloud Identity Resolution Match Criterion Party Identificaion Info Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_description"> Information when party identification is used in an identity resolution ruleset's match rule criterion.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_properties_partyName_description"> Party identification name.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_properties_partyName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_properties_partyType_description"> Party identification type.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput_properties_partyType_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_displayName"> Data Cloud Identity Resolution Match Rule Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_description"> Identity resolution ruleset's match rule criteria.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_properties_criteria_description"> Object and field the match rule applies to and the match method applied.
+
+**Type:** Data Cloud Identity Resolution Match Criterion Output[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_properties_criteria_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_properties_criteria_items_type"> CdpIdentityResolutionMatchCriterionOutput</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_properties_label_description"> User friendly name for the identity resolution match rules.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionMatchRuleOutput_properties_label_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_displayName"> Data Cloud Identity Resolution Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_description"> Represents Cdp Identity Resolution</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_anonymousUnifiedProfiles_description"> Count of anonymous unified profiles created by running the identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>format:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_anonymousUnifiedProfiles_format"> int64</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_anonymousUnifiedProfiles_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_configurationType_description"> Source object for an identity resolution. 
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_configurationType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_configurationType_enum"> ['Account', 'Individual']</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_consolidationRate_description"> Consolidation rate resulting from the run of an identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>format:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_consolidationRate_format"> double</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_consolidationRate_type"> number</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_dataSpaceName_description"> Data space used as source data for an identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_dataSpaceName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_description_description"> Description of the identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_doesRunAutomatically_description"> Specifies whether automatic job run scheduling is enabled for the ruleset (<code>true</code>) or not (<code>false</code>). If unspecified, defaults to <code>false</code>GenderId__c.ASC
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_doesRunAutomatically_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_id_description"> Identity resolution ruleset's ID. This is not the identity resolution's extended ruleset ID (<code>rulesetId</code>).
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_id_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_knownUnifiedProfiles_description"> Count of known unified profiles created by running the identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>format:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_knownUnifiedProfiles_format"> int64</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_knownUnifiedProfiles_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_label_description"> User friendly name of the identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_label_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_lastJobCompleted_description"> Date and time the last job completed.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_lastJobCompleted_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_lastJobStatus_description"> Last job's status. Possible values are:
+  - <code>SUCCESS</code>
+  - <code>IN_PROGRESS</code>
+  - <code>FAIL</code>
+  - <code>SCHEDULED</code>
+  - <code>SKIPPED</code>
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_lastJobStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_matchRules_description"> List of match rules. 
+
+**Type:** Data Cloud Identity Resolution Match Rule Output[] 
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_matchRules_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_matchRules_items_type"> CdpIdentityResolutionMatchRuleOutput</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_matchedSourceProfiles_description"> Count of matched source profiles identified by running the identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>format:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_matchedSourceProfiles_format"> int64</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_matchedSourceProfiles_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_objectApiName_description"> Object name of the identity resolution ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_objectApiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_reconciliationRules_description"> List of reconciliation rules.
+
+**Type:** Data Cloud Identity Resolution Reconciliation Rule Output[]
+
+**Filter Group and Version:** Big, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_reconciliationRules_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_reconciliationRules_items_type"> CdpIdentityResolutionReconciliationRuleOutput</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_rulesetId_description"> Extension ID of a ruleset. The ruleset ID must be unique and no longer than 4 characters. This ID is not the identifying ID for the ruleset.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_rulesetId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_rulesetStatus_description"> Status of a ruleset job. Possible values are: 
+  - <code>NEW</code>
+  - <code>PUBLISHING</code>
+  - <code>PUBLISHED</code>
+  - <code>ERROR</code>
+  - <code>DELETING</code>
+  - <code>DELETE_FAILED</code>
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_rulesetStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_sourceProfiles_description"> Count of source profiles that were processed by a ruleset job.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>format:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_sourceProfiles_format"> int64</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_sourceProfiles_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_totalUnifiedProfiles_description"> Count of unified profiles created by running the identity resolution ruleset. 
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>format:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_totalUnifiedProfiles_format"> int64</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionOutputRepresentation_properties_totalUnifiedProfiles_type"> integer</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_displayName"> Data Cloud Identity Resolution Reconciliation Field Rule Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_description"> Identity resolution ruleset's reconciliation rule for a field.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_fieldName_description"> The field that this reconciliation rule applies to.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_fieldName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_ruleType_description"> Default reconciliation rule applied to fields in the object the reconciliation rule applies to. 
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_ruleType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_ruleType_enum"> ['LastUpdated', 'MostFrequent', 'SourceSequence']</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_shouldIgnoreEmptyValue_description"> Specifies whether to ignore an empty value (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_shouldIgnoreEmptyValue_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_sources_description"> If <code>ruleType</code> is <code>SourceSequence</code>, a prioritized list of data sources.
+
+**Type:** Data Cloud Identity Resolution Reconciliation Source Output[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_sources_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationFieldRuleOutput_properties_sources_items_type"> CdpIdentityResolutionReconciliationSourceOutput</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_displayName"> Data Cloud Identity Resolution Reconciliation Rule Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_description"> Identity resolution ruleset's reconciliation rule for an object.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_entityName_description"> API name of the Data Model Object the reconciliation rule applies to.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_entityName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_fields_description"> Field-specific reconciliation rules that override this default rule for the specified field.
+
+**Type:** Data Cloud Identity Resolution Reconciliation Field Rule Output[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_fields_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_fields_items_type"> CdpIdentityResolutionReconciliationFieldRuleOutput</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_linkDmoName_description"> API name of the unified link object created by the identity resolution process.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_linkDmoName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_ruleType_description"> Default reconciliation rule applied to fields in the object the reconciliation rule applies to.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_ruleType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_ruleType_enum"> ['LastUpdated', 'MostFrequent', 'SourceSequence']</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_shouldIgnoreEmptyValue_description"> Specifies whether to ignore an empty value (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_shouldIgnoreEmptyValue_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_sources_description"> If <code>ruleType</code> is <code>SourceSequence</code>, a list of data sources in priority order.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_sources_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_sources_items_type"> CdpIdentityResolutionReconciliationSourceOutput</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_unifiedDmoName_description"> API name of the unified data model object created by the identity resolution process.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationRuleOutput_properties_unifiedDmoName_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionReconciliationSourceOutput_displayName"> Data Cloud Identity Resolution Reconciliation Source Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationSourceOutput_description"> Source for an identity resolution default reconciliation rule or field-specific rule using the SourceSequence match method.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationSourceOutput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionReconciliationSourceOutput_properties_name_description"> If the <code>ruleType</code> for a reconciliation rule is <code>SourceSequence</code>, API name of a source Data Lake Object.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionReconciliationSourceOutput_properties_name_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionRunNowInput_displayName"> Data Cloud Identity Resolution Run Now Input</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionRunNowInput_description"> Input representation for running an identity resolution on demand.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionRunNowInput_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionRunNowInput_properties_callingApp_description"> Calling application.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionRunNowInput_properties_callingApp_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionRunNowInput_properties_callingAppInfo_description"> Calling application information.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionRunNowInput_properties_callingAppInfo_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionRunNowOutputRepresentation_displayName"> Data Cloud Identity Resolution Run Now Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionRunNowOutputRepresentation_description"> Identity resolution ruleset run now output.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionRunNowOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionRunNowOutputRepresentation_properties_resultCode_description"> Result of an identity resolution ruleset job run.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionRunNowOutputRepresentation_properties_resultCode_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpIdentityResolutionRunNowOutputRepresentation_properties_resultCode_enum"> ['ExceededMaximumNumberOfSuccessfulRunsAllowedIn24Hours', 'IdentityResolutionJobIsAlreadyRunning', 'NoPendingChangesJobRunSkipped', 'SuccessfullySubmittedIdentityResolutionJobRunRequest']</ph></p>
+      <p>displayName:<ph id="capi_types_CdpIdentityResolutionsOutputRepresentation_displayName"> Data Cloud Identity Resolutions Output</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionsOutputRepresentation_description"> Identity resolution rulesets.</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionsOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpIdentityResolutionsOutputRepresentation_properties_identityResolutions_description"> List of identity resolution rulesets.
+
+**Type:** Data Cloud Identity Resolution Output[]
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionsOutputRepresentation_properties_identityResolutions_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpIdentityResolutionsOutputRepresentation_properties_identityResolutions_items_type"> CdpIdentityResolutionOutputRepresentation</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryDataOutputRepresentation_displayName"> Data Cloud Query Data Output</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryDataOutputRepresentation_description"> Query data output.</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryDataOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryDataOutputRepresentation_properties_data_description"> Result data set. 
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryDataOutputRepresentation_properties_data_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryDataOutputRepresentation_properties_data_items_type"> object</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryInputRepresentation_displayName"> Data Cloud Query Input</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryInputRepresentation_description"> Input representation for creating CDP query</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryInputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryInputRepresentation_properties_sql_description"> ANSI-standard SQL query.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryInputRepresentation_properties_sql_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryMetadataItemRepresentation_displayName"> Data Cloud Query Metadata Item</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryMetadataItemRepresentation_description"> Represents Cdp Metadata Item</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataItemRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryMetadataItemRepresentation_properties_placeInOrder_description"> Attribute place order in the result</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataItemRepresentation_properties_placeInOrder_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryMetadataItemRepresentation_properties_type_description"> Metadata Type for Column</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataItemRepresentation_properties_type_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryMetadataItemRepresentation_properties_typeCode_description"> Metadata Type Code</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataItemRepresentation_properties_typeCode_type"> integer</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryMetadataOutputRepresentation_displayName"> Data Cloud Query Metadata Output</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryMetadataOutputRepresentation_description"> Represents Cdp Query Metadata Output</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryMetadataOutputRepresentation_properties_metadata_description"> Result metadata set.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataOutputRepresentation_properties_metadata_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryMetadataOutputRepresentation_properties_metadata_items_type"> object</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryOutputRepresentation_displayName"> Data Cloud Query Output</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_description"> Represents Cdp Query output</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_data_description"> Result data set.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_data_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_data_items_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_done_description"> Specifies whether the query is done (<code>true</code>) or not (<code>false</code>). 
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_done_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_endTime_description"> Query end time.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_endTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_metadata_description"> Result metadata set.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_metadata_type"> object</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_metadata_properties__type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_queryId_description"> Query ID.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_queryId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_rowCount_description"> Number of rows in the result data set.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_rowCount_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputRepresentation_properties_startTime_description"> Query start time.
+
+**Filter Group and Version:** Small, 52.0
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputRepresentation_properties_startTime_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryOutputV2Representation_displayName"> Data Cloud Query Output V2</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_description"> Represents Cdp Query output for V2 API.</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_data_description"> Result data set
+
+**Type:** Data Cloud Query V2 Row[] (version 55.0 and later), Object[] (version 54.0 only)
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_data_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_data_items_type"> CdpQueryV2RowRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_dataspace_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_done_description"> Specifies whether the query is done (<code>true</code>) or not (<code>false</code>).
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_done_type"> boolean</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_endTime_description"> Query end time.
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_metadata_description"> Result metadata set.
+
+**Type:**  Map<String, Data Cloud Query Metadata Item> (version 55.0 and later), Map<String, Object> (version 54.0)
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_metadata_type"> object</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_metadata_properties__type"> CdpQueryMetadataItemRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_nextBatchId_description"> Next batch ID. Use this property as the *nextBatchId* parameter in the Data Cloud Query Batch resource to get the next batch of data.
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_nextBatchId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_queryId_description"> Query ID.
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_queryId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_rowCount_description"> Number of rows in the result data set.
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_rowCount_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryOutputV2Representation_properties_startTime_description"> Query start time. 
+
+**Filter Group and Version:** Small, 54.0
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryOutputV2Representation_properties_startTime_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpQueryV2RowRepresentation_displayName"> Data Cloud Query V2 Row</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryV2RowRepresentation_description"> Represents Row in the result of V2 query API</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryV2RowRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpQueryV2RowRepresentation_properties_rowData_description"> Row values.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryV2RowRepresentation_properties_rowData_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpQueryV2RowRepresentation_properties_rowData_items_type"> object</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentActionOutputRepresentation_displayName"> Data Cloud Segment Action Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_description"> Segment action.</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_errorCode_description"> Error code associated with the action, if any.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_errorCode_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_errorMessage_description"> Error message associated with the action, if any.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_errorMessage_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_jobId_description"> Job ID for the publish job.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_jobId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_partitionId_description"> ID of the partition.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_partitionId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_publishStatus_description"> Publish status of the segment.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_publishStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_segmentId_description"> ID of the segment.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentActionOutputRepresentation_properties_segmentId_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_displayName"> Data Cloud Segment Container Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_description"> Segment container.</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_batchSize_description"> Number of items returned. 
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_batchSize_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_offset_description"> Number of rows skipped before returning results.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_offset_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_orderByExpression_description"> Expression indicating how results are ordered.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_orderByExpression_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_segments_description"> List of segments.
+
+**Type:** Data Cloud Segment Output[]
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_segments_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentContainerOutputRepresentation_properties_segments_items_type"> CdpSegmentOutputRepresentation</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_displayName"> Data Cloud Segment Dbt Model Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_description"> Represents Cdp Segment output Dbt Model</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_properties_name_description"> DBT Model Name</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_properties_name_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_properties_sql_description"> DBT Model SQL</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentDbtModelOutputRepresentation_properties_sql_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentDbtPipelineOutputRepresentation_displayName"> Data Cloud Segment Dbt Pipeline Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentDbtPipelineOutputRepresentation_description"> Represents Cdp Segment output pipeline</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentDbtPipelineOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentDbtPipelineOutputRepresentation_properties_models_description"> DBT Models</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentDbtPipelineOutputRepresentation_properties_models_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentDbtPipelineOutputRepresentation_properties_models_items_type"> CdpSegmentDbtModelOutputRepresentation</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentInputRepresentation_displayName"> Data Cloud Segment Input</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_description"> Input representation for creating CDP Segment</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_additionalMetadata_description"> Map of additional metadata.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_additionalMetadata_type"> object</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_additionalMetadata_properties__type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_description_description"> Segment description.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_developerName_description"> Segment developer name. 
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_developerName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_displayName_description"> Segment display name. 
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_displayName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_einsteinGptSegmentsUICriteria_description"> EinsteinGptSegmentsUI segment criteria</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_einsteinGptSegmentsUICriteria_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_includeDbt_description"> Segment data build tool.
+
+**Type:** Data Cloud Segment Dbt Input
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_includeDbt_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_lookalikeCriteria_description"> Lookalike segment criteria</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_lookalikeCriteria_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishSchedule_description"> Publish refresh schedule.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishSchedule_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishSchedule_enum"> ['Four', 'NoRefresh', 'One', 'Six', 'Twelve', 'TwentyFour', 'Two']</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishScheduleEndDate_description"> Date indicating the end of the publish schedule. Optional if <code>publishSchedule</code> is unspecified.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishScheduleEndDate_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishScheduleStartDateTime_description"> Datetime indicating the start of the publish schedule. Optional if <code>publishSchedule</code> is unspecified.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_publishScheduleStartDateTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_segmentOnApiName_description"> API name of the SegmentOn entity.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_segmentOnApiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentInputRepresentation_properties_segmentType_description"> Type of segment. After a segment is created, the segment type can't be changed.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentInputRepresentation_properties_segmentType_type"> string</ph></p>
+      <p>enum:<ph id="capi_types_CdpSegmentInputRepresentation_properties_segmentType_enum"> ['Dbt', 'EinsteinGptSegmentsUI', 'Lookalike']</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_displayName"> Data Cloud Segment Lookalike Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_description"> Represents Cdp Segment output Lookalike</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_properties_additionalPopulation_description"> Lookalike criteria additional population</ph></p>
+      <p>format:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_properties_additionalPopulation_format"> int64</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_properties_additionalPopulation_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_properties_seedSegmentId_description"> Seed Segment Id for Lookalike</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentLookalikeOutputRepresentation_properties_seedSegmentId_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_displayName"> Data Cloud Segment Member Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_description"> Data Cloud segment member output.</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_data_description"> Result data set.
+
+**Type:** Data Cloud Segment Member Row Output[]
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_data_type"> array</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_data_items_type"> CdpSegmentMemberRowOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_endTime_description"> Query end time.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_endTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_filter_description"> Filter information for the query.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_filter_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_limit_description"> Batch size information.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_limit_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_nextPageUrl_description"> URL for the next page.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_nextPageUrl_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_offSet_description"> Offset information.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_offSet_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_orderBy_description"> Order by information.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_orderBy_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_rowCount_description"> Total row count.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_rowCount_type"> integer</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_startTime_description"> Query start time.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_startTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_totalCount_description"> Total count of records.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberOutputRepresentation_properties_totalCount_type"> integer</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_displayName"> Data Cloud Segment Member Row Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_description"> Data Cloud segment member row output.</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_deltaType_description"> Delta type, for example, <code>new</code>, <code>existing</code>, or <code>removed</code>.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_deltaType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_id_description"> Segment member ID.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_id_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_kqId_description"> Fully qualified key ID.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_kqId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_snapshotType_description"> Type of snapshot for example, <code>full</code>, <code>incremental</code>.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_snapshotType_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_timestamp_description"> Timestamp.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_timestamp_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_versionStamp_description"> Version timestamp.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMemberRowOutputRepresentation_properties_versionStamp_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_displayName"> Data Cloud Segment Membership Table Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_description"> Data Cloud segment membership table.</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_properties_historyTable_description"> Segment membership history table.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_properties_historyTable_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_properties_latestTable_description"> Segment membership latest table.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_properties_latestTable_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_properties_profileTable_description"> Segment membership profile table.
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentMembershipTableOutputRepresentation_properties_profileTable_type"> string</ph></p>
+      <p>displayName:<ph id="capi_types_CdpSegmentOutputRepresentation_displayName"> Data Cloud Segment Output</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_description"> Segment output.</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_type"> object</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_apiName_description"> API name of the segment. 
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_apiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_dataSpace_description"> Data space of the segment. 
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_dataSpace_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_description_description"> Segment description.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_description_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_developerName_description"> Segment developer name.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_developerName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_displayName_description"> Segment display name.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_displayName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_excludeCriteria_description"> Segment exclude criteria.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_excludeCriteria_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_includeCriteria_description"> Segment include criteria.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_includeCriteria_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_includeDbt_description"> Segment dbt pipeline.
+
+**Type:** Data Cloud Segment Dbt Pipeline
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_includeDbt_type"> CdpSegmentDbtPipelineOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_lookalikeCriteria_description"> Reserved for future use. 
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_lookalikeCriteria_type"> CdpSegmentLookalikeOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_marketSegmentDefinitionId_description"> ID of the market segment definition.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_marketSegmentDefinitionId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_marketSegmentId_description"> ID of the market segment.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_marketSegmentId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_nextPublishDateTime_description"> Date and time of the next segment publish.
+
+**Filter Group and Version:** Small, 57.0
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_nextPublishDateTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishInterval_description"> Segment publish interval.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishInterval_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishScheduleEndDate_description"> Publish schedule end date.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishScheduleEndDate_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishScheduleStartDateTime_description"> Publish schedule start date time.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishScheduleStartDateTime_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishStatus_description"> Segment publish status.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_publishStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentMembershipDmo_description"> Segment membership tables.
+
+**Type:** Data Cloud Segment Membership Table Output
+
+**Filter Group and Version:** Small, 58.0
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentMembershipDmo_type"> CdpSegmentMembershipTableOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentMembershipTable_description"> Name of the segment membership table. 
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentMembershipTable_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentOnApiName_description"> API name of the SegmentOn entity.
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentOnApiName_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentOnId_description"> ID of the DMO segment.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentOnId_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentStatus_description"> Segment status.
+
+**Filter Group and Version:** Small, 55.0
+
+**Available Version:** 55.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentStatus_type"> string</ph></p>
+      <p>description:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentType_description"> Type of segment. 
+
+**Filter Group and Version:** Small, 56.0
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_types_CdpSegmentOutputRepresentation_properties_segmentType_type"> string</ph></p>
+      <p>displayName:<ph id="capi_ssot_displayName"> SSOT</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_displayName"> Calculated Insights</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_get_displayName"> Data Cloud Calculated Insights</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_description"> Get calculated insights.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_responses_200_description"> Success
+
+Data Cloud Calculated Insight Collection (*CdpCalculatedInsightCollectionRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_responses_200_body_applicationjson_type"> CdpCalculatedInsightCollectionRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-300. If unspecified, the default value is <code>25</code>.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_queryParameters_dataspace_description"> Name of the dataspace. 
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_queryParameters_definitionType_description"> Definition type of the calculated insight. Values are:
+  - <code>CalculatedMetric</code>
+  - <code>ExternalMetric</code>
+  - <code>StreamingMetric</code>
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_queryParameters_definitionType_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_get_queryParameters_definitionType_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_queryParameters_orderby_description"> Sort order for the result set, seuch as <code>GenderId__c.ASC, Occupation__c.DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_get_queryParameters_orderby_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_get_queryParameters_pageToken_description"> Specifies the page token to use to view a page of information. Page tokens are returned as part of the response, such as <code>currentPageToken</code> or <code>nextPageToken</code>. If unspecified, the first page is returned.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_get_queryParameters_pageToken_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_get_queryParameters_pageToken_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_post_displayName"> Data Cloud Calculated Insights, Create</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_post_description"> Create a calculated insight.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_post_responses_200_description"> Success
+
+Data Cloud Calculated Insight (*CdpCalculatedInsightRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_post_responses_200_body_applicationjson_type"> CdpCalculatedInsightRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_post_body_applicationjson_type"> CdpCalculatedInsightInputRepresentation</ph></p>
+      <p>example:<ph id="capi_ssot_calculatedinsights_post_body_applicationjson_example"> {
+  "displayName": "dev1__demo_draft_ci_6__cio",
+  "apiName": "dev1__demo_draft_ci_6__cio",
+  "definitionType": "CalculatedMetric",
+  "expression": "SELECT count(ssot__Individual__dlm.ssot__DataSourceId__c) as dev1__m1__c, ssot__Individual__dlm.ssot__Id__c as dev1__d1__c FROM ssot__Individual__dlm WHERE ssot__Individual__dlm.ssot__InternalOrganizationId__c= 'test name' GROUP BY dev1__d1__c",
+  "draft": true,
+  "createdFromPackage": false,
+  "dataSpaceName": "",
+  "description": "",
+  "packagedCalculatedInsightApiName": "",
+  "publishScheduleEndDate": "",
+  "publishScheduleInterval": "NotScheduled",
+  "publishScheduleStartDateTime": ""
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_calculatedinsights_post_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_apiName_displayName"> by API Name</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_apiName_delete_displayName"> Data Cloud Calculated Insight, Delete</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_delete_description"> Delete a calculated insight.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_delete_responses_204_description"> Successful Delete</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_apiName_get_displayName"> Get Data Cloud Calculated Insight</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_get_description"> Get a calculated insight.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_get_responses_200_description"> Success
+
+Data Cloud Calculated Insight (*CdpCalculatedInsightRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_apiName_get_responses_200_body_applicationjson_type"> CdpCalculatedInsightRepresentation</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_apiName_patch_displayName"> Data Cloud Calculated Insight, Update</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_patch_description"> Update a calculated insight.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_patch_responses_200_description"> Success
+
+Data Cloud Calculated Insight (*CdpCalculatedInsightRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_apiName_patch_responses_200_body_applicationjson_type"> CdpCalculatedInsightRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_apiName_patch_body_applicationjson_type"> CdpCalculatedInsightInputRepresentation</ph></p>
+      <p>example:<ph id="capi_ssot_calculatedinsights_apiName_patch_body_applicationjson_example"> {
+  "displayName": "dev1__demo_draft_ci_6__cio",
+  "apiName": "dev1__demo_draft_ci_6__cio",
+  "definitionType": "CalculatedMetric",
+  "expression": "SELECT count(ssot__Individual__dlm.ssot__DataSourceId__c) as dev1__m1__c, ssot__Individual__dlm.ssot__Id__c as dev1__d1__c FROM ssot__Individual__dlm WHERE ssot__Individual__dlm.ssot__InternalOrganizationId__c= 'test name' GROUP BY dev1__d1__c",
+  "draft": true,
+  "createdFromPackage": false,
+  "dataSpaceName": "",
+  "description": "",
+  "packagedCalculatedInsightApiName": "",
+  "publishScheduleEndDate": "",
+  "publishScheduleInterval": "NotScheduled",
+  "publishScheduleStartDateTime": ""
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_calculatedinsights_apiName_patch_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiName_uriParameters_apiName_description"> API name of the calculated insight with suffix __cio.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_apiName_uriParameters_apiName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_apiName_uriParameters_apiName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_post_displayName"> Data Cloud Calculated Insight, Run</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_post_description"> Trigger a run on the calculated insight.
+
+**Available Version:** 57.0
+
+>**Note**
+>
+>POST doesn't take request parameters or a request body.
+</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_post_responses_200_description"> Success
+
+Data Cloud Calculated Insight Standard Action Response (*CdpCalculatedInsightStandardActionResponseRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_post_responses_200_body_applicationjson_type"> CdpCalculatedInsightStandardActionResponseRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_uriParameters_apiName_description"> API name of the calculated insight with suffix __cio.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_uriParameters_apiName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_calculatedinsights_apiNameactions_run_uriParameters_apiName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutions_displayName"> Identity Resolution Rulesets</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutions_get_displayName"> Data Cloud Identity Resolution Rulesets</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutions_get_description"> Get identity resolution rulesets.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutions_get_responses_200_description"> Success
+
+Data Cloud Identity Resolutions Output (*CdpIdentityResolutionsOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutions_get_responses_200_body_applicationjson_type"> CdpIdentityResolutionsOutputRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutions_get_queryParameters_filterGroup_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_identityresolutions_get_queryParameters_filterGroup_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutions_post_displayName"> Data Cloud Identity Resolution Rulesets, Create</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutions_post_description"> Create an identity resolution ruleset.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutions_post_responses_200_description"> Success
+
+Data Cloud Identity Resolution Ouput (*CdpIdentityResolutionOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutions_post_responses_200_body_applicationjson_type"> CdpIdentityResolutionOutputRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutions_post_body_applicationjson_type"> CdpIdentityResolutionConfigInput</ph></p>
+      <p>example:<ph id="capi_ssot_identityresolutions_post_body_applicationjson_example"> {
+  "label": "some label",
+  "description": "description",
+  "configurationType": "Individual",
+  "rulesetId": "sufx",
+  "doesRunAutomatically": false,
+  "dataSpaceName": "",
+  "matchRules": [
+    {
+      "label":   "Normalized Email",
+      "criteria": [
+        {
+          "entityName": "orgnamespace__*ContactPointEmail*MyDataSpace__dlm",
+          "fieldName": "orgnamespace__*EmailAddress*__c",
+          "matchMethodType": "EXACT_NORMALIZED",
+          "shouldMatchOnBlank": false
+        }
+      ]
+    },
+    {
+      "label": "Last Name and PartyId",
+      "criteria": [
+        {
+          "entityName": "orgnamespace__*Individual*MyDataSpace__dlm",
+          "fieldName": "orgnamespace__*LastName*__c",
+          "matchMethodType": "EXACT",
+          "shouldMatchOnBlank": false,
+          "partyIdentificationInfo": {
+            "partyName": "SomeID"
+          }
+        }
+      ]
+    }
+  ],
+  "reconciliationRules": [
+    {
+      "entityName": "orgnamespace__*Individual*MyDataSpace__dlm",
+      "ruleType": "LAST_UPDATED",
+      "shouldIgnoreEmptyValue": true,
+      "fields": [
+        {
+          "fieldName": "orgnamespace__*Id*__c",
+          "ruleType": "SOURCE_SEQUENCE",
+          "shouldIgnoreEmptyValue": true,
+          "sources": [
+            {
+              "name": "Patients__dll"
+            },
+            {
+              "name": "SomeAnother__dll"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entityName": "orgnamespace__*ContactPointEmail*MyDataSpace__dlm"
+    }
+  ]
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_identityresolutions_post_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutionsidentityResolution_displayName"> by Identity Resolution</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutionsidentityResolution_delete_displayName"> Data Cloud Identity Resolution Ruleset, Delete</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_delete_description"> Delete an identity resolution ruleset.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_delete_responses_204_description"> Successful Delete</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutionsidentityResolution_get_displayName"> Data Cloud Identity Resolution Ruleset</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_get_description"> Get an identity resolution ruleset.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_get_responses_200_description"> Success
+
+Data Cloud Identity Resolution Output (*CdpIdentityResolutionOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_get_responses_200_body_applicationjson_type"> CdpIdentityResolutionOutputRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_get_queryParameters_filterGroup_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_identityresolutionsidentityResolution_get_queryParameters_filterGroup_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutionsidentityResolution_patch_displayName"> Data Cloud Identity Resolution Ruleset, Update</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_patch_description"> Update an identity resolution ruleset.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_patch_responses_200_description"> Success
+
+Data Cloud Identity Resolution Output (*CdpIdentityResolutionOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_patch_responses_200_body_applicationjson_type"> CdpIdentityResolutionOutputRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_patch_body_applicationjson_type"> CdpIdentityResolutionConfigPatchInput</ph></p>
+      <p>example:<ph id="capi_ssot_identityresolutionsidentityResolution_patch_body_applicationjson_example"> {
+  "label": "some label",
+  "description": "description",
+  "doesRunAutomatically": false,
+  "matchRules": [
+    {
+      "label": "Normalized Email",
+      "criteria": [
+        {
+          "entityName": "orgnamespace__*ContactPointEmail*MyDataSpace__dlm",
+          "fieldName": "orgnamespace__*EmailAddress*__c",
+          "matchMethodType": "EXACT_NORMALIZED",
+          "shouldMatchOnBlank": false
+        }
+      ]
+    },
+    {
+      "label": "Last Name and PartyId",
+      "criteria": [
+        {
+          "entityName": "orgnamespace__*Individual*MyDataSpace__dlm",
+          "fieldName": "orgnamespace__*LastName*__c",
+          "matchMethodType": "EXACT",
+          "shouldMatchOnBlank": false,
+          "partyIdentificationInfo": {
+            "partyName": "SomeID"
+          }
+        }
+      ]
+    }
+  ],
+  "reconciliationRules": [
+    {
+      "entityName": "orgnamespace__*Individual*MyDataSpace__dlm",
+      "ruleType": "LAST_UPDATED",
+      "shouldIgnoreEmptyValue": true,
+      "fields": [
+        {
+          "fieldName": "orgnamespace__*Id*__c",
+          "ruleType": "SOURCE_SEQUENCE",
+          "shouldIgnoreEmptyValue": true,
+          "sources": [
+            {
+              "name": "Patients__dll"
+            },
+            {
+              "name": "SomeAnother__dll"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entityName": "orgnamespace__*ContactPointEmail*MyDataSpace__dlm"
+    }
+  ]
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_identityresolutionsidentityResolution_patch_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_uriParameters_identityResolution_description"> Developer name or ID of the ruleset.</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_uriParameters_identityResolution_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_identityresolutionsidentityResolution_uriParameters_identityResolution_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_displayName"> Data Cloud Identity Resolution Ruleset, Run Now</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_description"> Run an identity resolution ruleset job on demand.
+
+**Available Version:** 57.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_responses_200_description"> Success
+
+Data Cloud Identity Resolution Run Now Output (*CdpIdentityResolutionRunNowOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_responses_200_body_applicationjson_type"> CdpIdentityResolutionRunNowOutputRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_body_applicationjson_type"> CdpIdentityResolutionRunNowInput</ph></p>
+      <p>example:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_body_applicationjson_example"> {
+  "callingApp": "Flow",
+  "callingAppInfo": "10"
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_post_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>description:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_uriParameters_identityResolution_description"> Developer name or ID of the ruleset.</ph></p>
+      <p>type:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_uriParameters_identityResolution_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_identityresolutionsidentityResolution_runnow_uriParameters_identityResolution_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_insight_displayName"> Insights</ph></p>
+      <p>displayName:<ph id="capi_ssot_insight_calculatedinsights_ciName_displayName"> by Calculated Insight Name</ph></p>
+      <p>displayName:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_displayName"> Data Cloud Calculated Insight Query</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_description"> Query a Calculated Insight object.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_responses_200_description"> Success
+
+Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_responses_200_body_applicationjson_type"> CdpQueryOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>4999</code>.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_dimensions_description"> Comma-separated list of up to 10 dimensions, such as <code>GenderId__c,</code> to project. If unspecified, this parameter includes all of the available dimensions.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_dimensions_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_dimensions_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_filters_description"> Filter the result set to a more narrow scope or specific type, such as <code>[GenderId__c=Male,​FirstName__c=Angel]</code>.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_filters_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_filters_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_measures_description"> Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_measures_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_measures_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_orderby_description"> Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_orderby_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_timeGranularity_description"> Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+
+If unspecified, no time range is applied.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_timeGranularity_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_get_queryParameters_timeGranularity_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_calculatedinsights_ciName_uriParameters_ciName_description"> Name of the calculated insight object.</ph></p>
+      <p>type:<ph id="capi_ssot_insight_calculatedinsights_ciName_uriParameters_ciName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_calculatedinsights_ciName_uriParameters_ciName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_insight_metadata_displayName"> Metadata</ph></p>
+      <p>displayName:<ph id="capi_ssot_insight_metadata_get_displayName"> Data Cloud Insight Metadata</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadata_get_description"> Get Insight metadata, including Calculated Insight objects, their dimensions and measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadata_get_responses_200_description"> Success
+
+Data Cloud Query Metadata Ouput (*CdpQueryMetadataOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_metadata_get_responses_200_body_applicationjson_type"> CdpQueryMetadataOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadata_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_insight_metadata_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_metadata_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_insight_metadataciName_get_displayName"> Data Cloud Calculated Insight Metadata</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadataciName_get_description"> Get metadata for a Calculated Insight object. Metadata includes dimensions and measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadataciName_get_responses_200_description"> Success
+
+Data Cloud Query Metadata Output (*CdpQueryMetadataOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_insight_metadataciName_get_responses_200_body_applicationjson_type"> CdpQueryMetadataOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadataciName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_insight_metadataciName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_metadataciName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_insight_metadataciName_uriParameters_ciName_description"> Name of the calculated insight object.</ph></p>
+      <p>type:<ph id="capi_ssot_insight_metadataciName_uriParameters_ciName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_insight_metadataciName_uriParameters_ciName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_metadata_displayName"> Metadata</ph></p>
+      <p>displayName:<ph id="capi_ssot_metadata_get_displayName"> Data Cloud Metadata</ph></p>
+      <p>description:<ph id="capi_ssot_metadata_get_description"> Get all metadata, including Calculated Insights, Engagement, Profile, and other objects, as well as their relationships to other objects.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_metadata_get_responses_200_description"> Success
+
+Data Cloud Query Metadata Output (*CdpQueryMetadataOutputRepresentation*)
+  <br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_metadata_get_responses_200_body_applicationjson_type"> CdpQueryMetadataOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_metadata_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_metadata_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_metadata_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_metadata_get_queryParameters_entityCategory_description"> Category of the metadata entity. Valid values are <code>Profile</code>, <code>Engagement</code>, and <code>Related</code>. If unspecified, all category entities are returned.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_metadata_get_queryParameters_entityCategory_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_metadata_get_queryParameters_entityCategory_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_metadata_get_queryParameters_entityName_description"> Metadata name of the entity, for example <code>UnifiedIndividual__dlm</code>. If unspecified, a complete list of entities is returned.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_metadata_get_queryParameters_entityName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_metadata_get_queryParameters_entityName_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_metadata_get_queryParameters_entityType_description"> Type of metadata entity requested. Valid values are <code>DataLakeObject</code>, <code>DataModelObject</code>, and <code>CalculatedInsight</code>. If unspecified, all types are returned.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_metadata_get_queryParameters_entityType_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_metadata_get_queryParameters_entityType_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_displayName"> Profile Library</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_metadata_displayName"> Metadata</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_metadata_get_displayName"> Data Cloud Profile Metadata</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadata_get_description"> Get metadata for data model objects in the profile category, including Individual, Contact Point Email, Unified Individual, and Contact Point Address objects. Metadata includes the objects, their fields, and category.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadata_get_responses_200_description"> Success
+
+Data Cloud Query Metadata Output (*CdpQueryMetadataOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_metadata_get_responses_200_body_applicationjson_type"> CdpQueryMetadataOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadata_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_metadata_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_metadata_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_metadatadataModelName_get_displayName"> Data Cloud Profile Metadata, Data Model Object</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadatadataModelName_get_description"> Get metadata for a data model object in the profile category, such as Individual, Contact Point Email, Unified Individual, and Contact Point Address. Metadata includes the list of fields, data types, and indexes available for lookup.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadatadataModelName_get_responses_200_description"> Success
+
+Data Cloud Query Metadata Output (*CdpQueryMetadataOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_metadatadataModelName_get_responses_200_body_applicationjson_type"> CdpQueryMetadataOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadatadataModelName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_metadatadataModelName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_metadatadataModelName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_metadatadataModelName_uriParameters_dataModelName_description"> Name of the data model object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_metadatadataModelName_uriParameters_dataModelName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_metadatadataModelName_uriParameters_dataModelName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelName_displayName"> by Data Model Name</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelName_get_displayName"> Data Cloud Profile Query, Data Model Object</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_description"> Query a Profile data model object using filters.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_responses_200_description"> Success
+
+Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_responses_200_body_applicationjson_type"> CdpQueryOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_dimensions_description"> Comma-separated list of up to 10 dimensions, such as <code>GenderId__c,</code> to project. If unspecified, this parameter includes all of the available dimensions.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_dimensions_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_dimensions_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_fields_description"> Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_fields_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_fields_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_filters_description"> Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_filters_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_filters_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_measures_description"> Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_measures_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_measures_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_orderby_description"> Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_orderby_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_searchKey_description"> If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_searchKey_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_searchKey_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_timeGranularity_description"> Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+
+If unspecified, no time range is applied.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_timeGranularity_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_get_queryParameters_timeGranularity_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelName_uriParameters_dataModelName_description"> Name of the data model object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelName_uriParameters_dataModelName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelName_uriParameters_dataModelName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelNameid_displayName"> by ID</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelNameid_get_displayName"> Data Cloud Profile Query, Data Model Object with Search Key</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_description"> Query a Profile data model object using filters and a search key.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_responses_200_description"> Success
+
+Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_responses_200_body_applicationjson_type"> CdpQueryOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+
+**Available Version:** 52.
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_dimensions_description"> Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_dimensions_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_dimensions_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_fields_description"> Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_fields_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_fields_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_filters_description"> Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_filters_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_filters_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_measures_description"> Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_measures_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_measures_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_orderby_description"> Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_orderby_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_searchKey_description"> If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_searchKey_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_searchKey_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_timeGranularity_description"> Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>.  
+
+If unspecified, no time range is applied.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_timeGranularity_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_get_queryParameters_timeGranularity_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_uriParameters_dataModelName_description"> Name of the data model object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_uriParameters_dataModelName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_uriParameters_dataModelName_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_uriParameters_id_description"> ID of the data model object (value of the primary or secondary key field).</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_uriParameters_id_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_uriParameters_id_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_displayName"> by Calculated Insight Name</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_displayName"> Data Cloud Profile Query, Data Model Object and Calculated Insight Object with Search Key</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_description"> Query a Profile data model object and a Calculated Insight object using filters and a search key.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_responses_200_description"> Success
+
+Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_responses_200_body_applicationjson_type"> CdpQueryOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+
+**Available Version:** 52.
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_dimensions_description"> Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_dimensions_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_dimensions_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_fields_description"> Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_fields_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_fields_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_filters_description"> Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_filters_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_filters_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_measures_description"> Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_measures_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_measures_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_orderby_description"> Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_orderby_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_searchKey_description"> If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_searchKey_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_searchKey_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_timeGranularity_description"> Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+
+If unspecified, no time range is applied.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_timeGranularity_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_get_queryParameters_timeGranularity_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_ciName_description"> Name of the calculated insight object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_ciName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_ciName_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_dataModelName_description"> Name of the data model object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_dataModelName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_dataModelName_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_id_description"> ID of the data model object (value of the primary or secondary key field).</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_id_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_calculatedinsightsciName_uriParameters_id_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_displayName"> Data Cloud Profile Query, Data Model Object and Child Object with Search Key</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_description"> Query a Profile data model object and a child object using filters and a search key.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_responses_200_description"> Success
+
+Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_responses_200_body_applicationjson_type"> CdpQueryOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+
+**Available Version:** 52.
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_dimensions_description"> Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_dimensions_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_dimensions_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_fields_description"> Comma-separated list of child object field names that you want to include in the result, for example, <code>Id__c,EmailAddress__c</code>. If unspecified, the first 10 alphabetically sorted fields are returned.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_fields_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_fields_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_filters_description"> Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>. Filters are applied to the parent object only.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_filters_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_filters_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_measures_description"> Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_measures_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_measures_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_orderby_description"> Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_orderby_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_searchKey_description"> If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+
+**Available Version:** 52.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_searchKey_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_searchKey_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_timeGranularity_description"> Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+
+If unspecified, no time range is applied.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_timeGranularity_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_get_queryParameters_timeGranularity_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_childDataModelName_description"> Name of the child data model object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_childDataModelName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_childDataModelName_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_dataModelName_description"> Name of the data model object.</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_dataModelName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_dataModelName_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_id_description"> ID of the data model object (value of the primary or secondary key field).</ph></p>
+      <p>type:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_id_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_profile_dataModelNameid_childDataModelName_uriParameters_id_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_query_displayName"> Query Library</ph></p>
+      <p>displayName:<ph id="capi_ssot_query_post_displayName"> Data Cloud Query</ph></p>
+      <p>description:<ph id="capi_ssot_query_post_description"> Synchronously query data across data model, lake, unified, and linked objects. This query returns up to 4,999 rows.
+
+**Available Version:** 52.0
+
+>**Note**
+>
+>A newer version of the Query API is available. We recommend using Query V2 API to take advantage of GET calls in addition to POST calls, subsequent requests, and larger response sizes.
+</ph></p>
+      <p>description:<ph id="capi_ssot_query_post_responses_200_description"> Success
+
+Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_query_post_responses_200_body_applicationjson_type"> CdpQueryOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_query_post_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+
+**Available Version:** 53.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_query_post_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_query_post_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_query_post_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_query_post_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_query_post_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_query_post_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 53.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_query_post_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_query_post_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_query_post_queryParameters_orderby_description"> Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+
+**Available Version:** 53.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_query_post_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_query_post_queryParameters_orderby_required"> False</ph></p>
+      <p>type:<ph id="capi_ssot_query_post_body_applicationjson_type"> CdpQueryInputRepresentation</ph></p>
+      <p>example:<ph id="capi_ssot_query_post_body_applicationjson_example"> {
+  "sql": "select BirthDate__c, DataSourceId__c, DataSourceObjectId__c, ExternalRecordId__c, FirstName__c, GenderId__c, Id__c, InternalOrganizationId__c, LastName__c from Individual__dlm where Id__c='100470169'"
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_query_post_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>displayName:<ph id="capi_ssot_queryv2_displayName"> Query V2</ph></p>
+      <p>displayName:<ph id="capi_ssot_queryv2_post_displayName"> Data Cloud Query V2</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2_post_description"> Query up to 8 MB of data across data model, lake, unified, and linked objects.
+
+**Available Version:** 54.0
+
+>**Note**
+>
+>Use the nextBatchId from the Data Cloud Query Output V2 response body as the nextBatchId parameter in the Data Cloud Query Batch resource to get the next batch of data.
+</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2_post_responses_200_description"> Success
+
+Data Cloud Query Output V2 (*CdpQueryOutputV2Representation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_queryv2_post_responses_200_body_applicationjson_type"> CdpQueryOutputV2Representation</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2_post_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_queryv2_post_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_queryv2_post_queryParameters_dataspace_required"> False</ph></p>
+      <p>type:<ph id="capi_ssot_queryv2_post_body_applicationjson_type"> CdpQueryInputRepresentation</ph></p>
+      <p>example:<ph id="capi_ssot_queryv2_post_body_applicationjson_example"> {
+  "sql": "select BirthDate__c, DataSourceId__c, DataSourceObjectId__c, ExternalRecordId__c, FirstName__c, GenderId__c, Id__c, InternalOrganizationId__c, LastName__c from Individual__dlm where Id__c='100470169'"
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_queryv2_post_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>displayName:<ph id="capi_ssot_queryv2nextBatchId_get_displayName"> Data Cloud Query Batch</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2nextBatchId_get_description"> Get the next batch of data across data model, lake, unified, and linked objects. 
+
+Initially, use the Data Cloud Query V2 resource to query up to 8 MB of data. Use the <code>nextBatchId</code> from the Data Cloud Query Output V2 response body as the value of *nextBatchId* in this API to get the next batch of data. You can continue using subsequent next batch IDs for up to an hour.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2nextBatchId_get_responses_200_description"> Success
+
+Data Cloud Query Output V2 (*CdpQueryOutputV2Representation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_queryv2nextBatchId_get_responses_200_body_applicationjson_type"> CdpQueryOutputV2Representation</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2nextBatchId_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_queryv2nextBatchId_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_queryv2nextBatchId_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_queryv2nextBatchId_uriParameters_nextBatchId_description"> ID from the Data Cloud Query Output V2 response body.</ph></p>
+      <p>type:<ph id="capi_ssot_queryv2nextBatchId_uriParameters_nextBatchId_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_queryv2nextBatchId_uriParameters_nextBatchId_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_displayName"> Segments</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_get_displayName"> Data Cloud Segments</ph></p>
+      <p>description:<ph id="capi_ssot_segments_get_description"> Get segments.
+
+**Available Version:** 55.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_get_responses_200_description"> Success
+
+Data Cloud Segment Container Output (*CdpSegmentContainerOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_get_responses_200_body_applicationjson_type"> CdpSegmentContainerOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_segments_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1–200. If unspecified, the default value is <code>20</code>
+
+**Available Version:** 56.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_segments_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version**: 56.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_segments_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_get_queryParameters_orderby_description"> Sort order for the result set, such as <code>Name ASC</code> or <code>MarketSegmentType DESC</code>. If unspecified, items are returned by ID in ascending order.
+
+**Available Version**: 56.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_get_queryParameters_orderby_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_post_displayName"> Data Cloud Segments, Create</ph></p>
+      <p>description:<ph id="capi_ssot_segments_post_description"> Create a segment.
+
+**Available Version**: 55.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_post_responses_200_description"> Success
+
+Data Cloud Segment Output (*CdpSegmentOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_post_responses_200_body_applicationjson_type"> CdpSegmentOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_segments_post_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_post_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_post_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_post_body_applicationjson_description"> Segment Input Representation (*CdpSegmentInputRepresenation*)</ph></p>
+      <p>type:<ph id="capi_ssot_segments_post_body_applicationjson_type"> CdpSegmentInputRepresentation</ph></p>
+      <p>example:<ph id="capi_ssot_segments_post_body_applicationjson_example"> {
+  "developerName": "ConnectSegment20",
+  "displayName": "",
+  "description": "This is a connect API segment",
+  "segmentOnApiName": "",
+  "publishSchedule": "NoRefresh",
+  "publishScheduleEndDate": "",
+  "publishScheduleStartDateTime": "",
+  "additionalMetadata": {},
+  "einsteinGptSegmentsUICriteria": {},
+  "lookalikeCriteria": {},
+  "includeDbt": {
+  "models": {
+    "models": [
+      {
+        "name": "m1",
+        "sql": "select ssot__Individual__dlm.ssot__Id__c from ssot__Individual__dlm where ssot__Individual__dlm.ssot__FirstName__c='john'"
+      }
+    ]
+  }
+  },
+  "segmentType": "Dbt"
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_segments_post_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentApiName_displayName"> by API Name</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentApiName_delete_displayName"> Data Cloud Segment, Delete</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_delete_description"> Delete a segment.
+
+**Available Version:** 56.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_delete_responses_204_description"> Successful Delete
+</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentApiName_get_displayName"> Data Cloud Segment</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_get_description"> Get a segment.
+
+**Available Version:** 56.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_get_responses_200_description"> Success
+
+Data Cloud Segment Container Outpu (*CdpSegmentContainerOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_get_responses_200_body_applicationjson_type"> CdpSegmentContainerOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_batchSize_description"> Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_batchSize_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_batchSize_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_orderby_description"> Sort order for the result set, such as GenderId__c ASC,​Occupation__c DESC. If unspecified, items are returned in the order they are retrieved.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_orderby_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_get_queryParameters_orderby_required"> False</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentApiName_patch_displayName"> Data Cloud Segment, Update</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_patch_description"> Update a segment.
+
+**Available Version:** 56.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_patch_responses_200_description"> Success
+
+Data Cloud Segment Output (*CdpSegmentOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_patch_responses_200_body_applicationjson_type"> CdpSegmentOutputRepresentation</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_patch_body_applicationjson_type"> CdpSegmentInputRepresentation</ph></p>
+      <p>example:<ph id="capi_ssot_segments_segmentApiName_patch_body_applicationjson_example"> {
+  "developerName": "ConnectSegment20",
+  "displayName": "",
+  "description": "This is a connect API segment",
+  "segmentOnApiName": "",
+  "publishSchedule": "NoRefresh",
+  "publishScheduleEndDate": "",
+  "publishScheduleStartDateTime": "",
+  "additionalMetadata": {},
+  "einsteinGptSegmentsUICriteria": {},
+  "lookalikeCriteria": {},
+  "includeDbt": {
+  "models": {
+    "models": [
+      {
+        "name": "m1",
+        "sql": "select ssot__Individual__dlm.ssot__Id__c from ssot__Individual__dlm where ssot__Individual__dlm.ssot__FirstName__c='john'"
+      }
+    ]
+  }
+  },
+  "segmentType": "Dbt"
+}
+</ph></p>
+      <p>(oas-body-name):<ph id="capi_ssot_segments_segmentApiName_patch_body_applicationjson_(oas-body-name)"> input</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_uriParameters_segmentApiName_description"> Name of the segment API.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_uriParameters_segmentApiName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_uriParameters_segmentApiName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentApiName_members_get_displayName"> Data Cloud Segment Members</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_description"> Get segment members.
+
+**Available Version:** 58.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_responses_200_description"> Success
+
+Data Cloud Segment Member Output (*CdpSegmentMemberOutputRepresenation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_responses_200_body_applicationjson_type"> CdpSegmentMemberOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_fields_description"> Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c,​GenderId__c,Occupation__c</code>. If unspecified, Id__c is returned.
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_fields_type"> array</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_fields_required"> False</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_fields_items_type"> string</ph></p>
+      <p>(oas-collectionFormat):<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_fields_items_(oas-collectionFormat)"> csv</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_filters_description"> Filter the result set to a more narrow scope or specific type, such as <code>[GenderId__c=Male,​FirstName__c=Angel]</code>. 
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_filters_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_filters_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_limit_description"> Maximum number of rows to return from <code>1</code>–<code>1000</code>. If unspecified, the default number of rows is <code>100</code>.
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_limit_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_limit_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_offset_description"> Number of rows to skip before returning results. If unspecified, no rows are skipped.
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_offset_type"> integer</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_offset_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_orderBy_description"> Sort order for the result set, such as <code>Name ASC</code> or <code>MarketSegmentType DESC</code>. If unspecified, items are returned by ID in ascending order.
+
+**Available Version:** 58.0
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_orderBy_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_members_get_queryParameters_orderBy_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentApiName_members_uriParameters_segmentApiName_description"> Name of the segment API.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentApiName_members_uriParameters_segmentApiName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentApiName_members_uriParameters_segmentApiName_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentId_displayName"> by Segment ID</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentId_actionspublish_displayName"> Segments by Segment ID</ph></p>
+      <p>displayName:<ph id="capi_ssot_segments_segmentId_actionspublish_post_displayName"> Data Cloud Segment, Publish</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentId_actionspublish_post_description"> Publish a segment.
+
+**Available Version:** 58.0
+
+>**Note**
+>
+>POST doesn't take request parameters or a request body.
+</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentId_actionspublish_post_responses_200_description"> Success
+
+Data Cloud Segment Action Output (*CdpSegmentActionOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentId_actionspublish_post_responses_200_body_applicationjson_type"> CdpSegmentActionOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_segments_segmentId_actionspublish_uriParameters_segmentId_description"> ID of the segment.</ph></p>
+      <p>type:<ph id="capi_ssot_segments_segmentId_actionspublish_uriParameters_segmentId_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_segments_segmentId_actionspublish_uriParameters_segmentId_required"> True</ph></p>
+      <p>displayName:<ph id="capi_ssot_universalIdLookup_displayName"> Universal Lookup ID</ph></p>
+      <p>displayName:<ph id="capi_ssot_universalIdLookup_entityName_displayName"> by Entity Name</ph></p>
+      <p>displayName:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_displayName"> Data Cloud Universal ID Lookup</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_description"> Look up objects by source ID.
+
+**Available Version:** 54.0
+</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_responses_200_description"> Success
+
+Data Cloud Query Data Output (*CdpQueryDataOutputRepresentation*)
+<br></br>
+</ph></p>
+      <p>type:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_responses_200_body_applicationjson_type"> CdpQueryDataOutputRepresentation</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_queryParameters_dataspace_description"> Name of the dataspace.</ph></p>
+      <p>type:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_queryParameters_dataspace_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_get_queryParameters_dataspace_required"> False</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_dataSourceId_description"> The name of the bridge table entity.</ph></p>
+      <p>type:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_dataSourceId_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_dataSourceId_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_dataSourceObjectId_description"> ID of the data source.</ph></p>
+      <p>type:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_dataSourceObjectId_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_dataSourceObjectId_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_entityName_description"> ID of the data source object.</ph></p>
+      <p>type:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_entityName_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_entityName_required"> True</ph></p>
+      <p>description:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_sourceRecordId_description"> ID of the source record.</ph></p>
+      <p>type:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_sourceRecordId_type"> string</ph></p>
+      <p>required:<ph id="capi_ssot_universalIdLookup_entityName_dataSourceIddataSourceObjectIdsourceRecordId_uriParameters_sourceRecordId_required"> True</ph></p>
+
+    <section>
+  </refbody>
+</reference>

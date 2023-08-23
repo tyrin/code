@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="connectAPI_resources" xml:lang="en-us">
+  <title>Apex Connect API Resources</title>
+  <shortdesc>Values for the <codeph otherprops="apex_code">ConnectApi</codeph>
+    namespace.</shortdesc>
+  <prolog>
+    <metadata>
+      <othermeta content="Apex_Code_Development_Deployment Chatter_REST_API" name="app_area"/>
+      <othermeta content="aloha mobile sfx" name="ui_platform"/>
+      <othermeta content="Developer" name="role"/>
+      <othermeta content="GE PE EE UE DE CE CSN DBCOM PXE" name="edition"/>
+      <othermeta content="concept" name="topic_type"/>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section>
+    
