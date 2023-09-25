@@ -10,7 +10,6 @@ from pprint import pprint
 from pandas import json_normalize
 from os import getcwd, path
 from yaml import SafeLoader, load
-import xml.etree.ElementTree as ET
 import re #regular expressions
 import argparse
 import json
@@ -130,9 +129,6 @@ outputfile.write(templatedata)
 
 #Convert the yaml to a pdict
 ramldict=yaml.safe_load(data)
-#load the apex file and convert it to an etree
-#tree = ET.parse(specPath)
-#root = tree.getroot()
 
 dictid = "capi"
 process_dict(ramldict, dictid)
