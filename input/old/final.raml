@@ -6,7 +6,7 @@ version: '59.0'
 mediaType: application/json
 protocols:
 - https
-baseUri: api.datacloud.com/services/data/v59.0
+baseUri: "{dne_cdpInstanceUrl}/services/data/v{version}"
 securitySchemes:
   OAuth2:
     type: OAuth 2.0
@@ -628,6 +628,7 @@ types:
   #       - Number
   #       - Text
   CdpActionResponseBaseRepresentation: #USED
+    displayName: Data Cloud Action Response Base
     description: Cdp action result base
     type: object
     properties:
@@ -809,6 +810,7 @@ types:
   #       description: Indicates if the business unit is selected for Ingestion
   #       type: boolean
   CdpCalculatedInsightCollectionDataRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Collection Data
     description: Calculated insight collection data.
     type: object
     properties:
@@ -889,6 +891,7 @@ types:
           **Available Version:** 57.0
         type: integer
   CdpCalculatedInsightCollectionRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Collection
     description: Container of a calculated insights page.
     type: object
     properties:
@@ -903,6 +906,7 @@ types:
           **Available Version:** 57.0
         type: CdpCalculatedInsightCollectionDataRepresentation
   CdpCalculatedInsightDataSourceRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Data Source
     description: A calculated insight data source.
     type: object
     properties:
@@ -913,6 +917,7 @@ types:
         description: Type
         type: string
   CdpCalculatedInsightDimensionRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Dimension
     description: A calculated insight dimension.
     type: object
     properties:
@@ -951,6 +956,7 @@ types:
   #       description: Error message
   #       type: string
   CdpCalculatedInsightInputRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Input
     description: |
       Input representation for a calculated insight.
 
@@ -971,7 +977,7 @@ types:
         type: boolean
       dataSpaceName:
         description: |
-          Name of the data space.
+          Name of the dataspace.
 
           **Available Version:** 57.0
         type: string
@@ -1039,6 +1045,7 @@ types:
           **Expected format:** yyyy-MM-ddTHH:mm
         type: string
   CdpCalculatedInsightMeasureRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Measure
     description: A calculated insight measure.
     type: object
     properties:
@@ -1067,6 +1074,7 @@ types:
         description: Formula
         type: string
   CdpCalculatedInsightRepresentation: #USED
+    displayName: Data Cloud Calculated Insight
     description: |
       A calculated insight.
       
@@ -1248,6 +1256,7 @@ types:
           **Expected format:** yyyy-MM-ddTHH:mm
         type: string
   CdpCalculatedInsightStandardActionResponseRepresentation: #USED
+    displayName: Data Cloud Calculated Insight Standard Action Response
     description: Response of the calculated insight run action. 
     type: CdpActionResponseBaseRepresentation
     properties:
@@ -1272,6 +1281,7 @@ types:
           **Available Version:** 57.0
         type: boolean
   CdpCalculatedInsightValidateInputRepresentation:
+    displayName: Data Cloud Calculated Insight Validate Input
     description: Validation input representation for a Calculated Insight.
     type: object
     properties:
@@ -1327,7 +1337,8 @@ types:
   #     orgId:
   #       description: Org Id
   #       type: string
-  # CdpDataActionCollectionRepresentation:
+  # CdpDataActionCollectionRepresentation: 
+  #   displayName: Data Cloud Data Action Collection
   #   description: Container of data action page.
   #   type: object
   #   properties:
@@ -1342,7 +1353,8 @@ types:
   #     nextPageUrl:
   #       description: URL to the next page of data actions.
   #       type: string
-  # CdpDataActionInputRepresentation:
+  # CdpDataActionInputRepresentation: 
+  #   displayName: Data Cloud Data Action Input
   #   description: Input representation for creating a CDP Action
   #   type: object
   #   properties:
@@ -1408,7 +1420,8 @@ types:
   #     contentTemplate:
   #       description: Content Template
   #       type: string
-  # CdpDataActionOutputRepresentation:
+  # CdpDataActionOutputRepresentation: 
+  #   displayName: Data Cloud Data Action Output
   #   description: Represents Cdp Create DataAction output
   #   type: object
   #   properties:
@@ -1490,7 +1503,8 @@ types:
   #     orgLabel:
   #       description: Org Label for Target CRM
   #       type: string
-  # CdpDataActionTargetCollectionRepresentation:
+  # CdpDataActionTargetCollectionRepresentation: 
+  #   displayName: Data Cloud Data Action Target Collection
   #   description: Container of data action target page.
   #   type: object
   #   properties:
@@ -1515,7 +1529,7 @@ types:
   #     targetEndpoint:
   #       description: Target Endpoint
   #       type: string
-  # CdpDataActionTargetInfo:
+  # CdpDataActionTargetInfo: 
   #   description: Represents data action target config
   #   type: object
   #   properties:
@@ -1559,7 +1573,8 @@ types:
   #     contentTemplate:
   #       description: Content Template
   #       type: string
-  # CdpDataActionTargetOutputRepresentation:
+  # CdpDataActionTargetOutputRepresentation: 
+  #   displayName: Data Cloud Data Action Target Output
   #   description: A Data Action target representation.
   #   type: object
   #   properties:
@@ -2113,6 +2128,7 @@ types:
   #       description: The 18 char ID.
   #       type: string
   CdpErrorRepresentation: #USED
+    displayName: Data Cloud Error
     description: Error response.
     type: object
     properties:
@@ -2285,6 +2301,7 @@ types:
   #       description: Number of hours between runs.
   #       type: integer
   CdpIdentityResolutionConfigInput: #USED
+    displayName: Data Cloud Identity Resolution Config Input
     description: Input representation for creating a CDP Identity Resolution
     type: object
     properties:
@@ -2320,6 +2337,7 @@ types:
         description: Ruleset Id
         type: string
   CdpIdentityResolutionConfigPatchInput: #USED
+    displayName: Data Cloud Identity Resolution Config Patch Input
     description: Input representation for updating a CDP identity resolution.
     type: object
     properties:
@@ -2401,6 +2419,7 @@ types:
   #       description: Should match on blank
   #       type: boolean
   CdpIdentityResolutionMatchCriterionOutput: #USED
+    displayName: Data Cloud Identity Resolution Match Criterion Output
     description: Identity resolution ruleset match rule criterion.
     type: object
     properties:
@@ -2472,6 +2491,7 @@ types:
   #       description: Party Identification type
   #       type: string
   CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput: #USED
+    displayName: Data Cloud Identity Resolution Match Criterion Party Identificaion Info Output
     description: Information when party identification is used in an identity resolution ruleset's match rule criterion.
     type: object
     properties:
@@ -2504,6 +2524,7 @@ types:
   #       description: Label
   #       type: string
   CdpIdentityResolutionMatchRuleOutput: #USED
+    displayName: Data Cloud Identity Resolution Match Rule Output
     description: Identity resolution ruleset's match rule criteria.
     type: object
     properties:
@@ -2537,6 +2558,7 @@ types:
   #       items:
   #         type: object
   CdpIdentityResolutionOutputRepresentation: #USED
+    displayName: Data Cloud Identity Resolution Output
     description: Represents Cdp Identity Resolution
     type: object
     properties:
@@ -2748,6 +2770,7 @@ types:
   #       items:
   #         type: object
   CdpIdentityResolutionReconciliationFieldRuleOutput: #USED
+    displayName: Data Cloud Identity Resolution Reconciliation Field Rule Output
     description: Identity resolution ruleset's reconciliation rule for a field.
     type: object
     properties:
@@ -2828,6 +2851,7 @@ types:
   #       items:
   #         type: object
   CdpIdentityResolutionReconciliationRuleOutput: #USED
+    displayName: Data Cloud Identity Resolution Reconciliation Rule Output
     description: Identity resolution ruleset's reconciliation rule for an object.
     type: object
     properties:
@@ -2914,6 +2938,7 @@ types:
   #       description: Source name
   #       type: string
   CdpIdentityResolutionReconciliationSourceOutput: #USED
+    displayName: Data Cloud Identity Resolution Reconciliation Source Output
     description: Source for an identity resolution default reconciliation rule or field-specific rule using the SourceSequence match method.
     type: object
     properties:
@@ -2935,6 +2960,7 @@ types:
   #       items:
   #         type: object
   CdpIdentityResolutionRunNowInput: #USED
+    displayName: Data Cloud Identity Resolution Run Now Input
     description: Input representation for running an identity resolution on demand.
     type: object
     properties:
@@ -2951,6 +2977,7 @@ types:
           **Available Version:** 57.0
         type: string
   CdpIdentityResolutionRunNowOutputRepresentation: #USED
+    displayName: Data Cloud Identity Resolution Run Now Output
     description: Identity resolution ruleset run now output.
     type: object
     properties:
@@ -2968,6 +2995,7 @@ types:
         - NoPendingChangesJobRunSkipped
         - SuccessfullySubmittedIdentityResolutionJobRunRequest
   CdpIdentityResolutionsOutputRepresentation: #USED
+    displayName: Data Cloud Identity Resolutions Output
     description: Identity resolution rulesets.
     type: object
     properties:
@@ -6277,6 +6305,7 @@ types:
   #       description: Total size of collection
   #       type: integer
   CdpQueryDataOutputRepresentation: #USED
+    displayName: Data Cloud Query Data Output
     description: Query data output.
     type: object
     properties:
@@ -6291,6 +6320,7 @@ types:
         items:
           type: object
   CdpQueryInputRepresentation: #USED
+    displayName: Data Cloud Query Input
     description: Input representation for creating CDP query
     type: object
     properties:
@@ -6301,6 +6331,7 @@ types:
           **Available Version:** 52.0
         type: string
   CdpQueryMetadataItemRepresentation: #USED
+    displayName: Data Cloud Query Metadata Item
     description: Represents Cdp Metadata Item
     type: object
     properties:
@@ -6314,6 +6345,7 @@ types:
         description: Metadata Type Code
         type: integer
   CdpQueryMetadataOutputRepresentation: #USED
+    displayName: Data Cloud Query Metadata Output
     description: Represents Cdp Query Metadata Output
     type: object
     properties:
@@ -6328,6 +6360,7 @@ types:
         items:
           type: object
   CdpQueryOutputRepresentation: #USED
+    displayName: Data Cloud Query Output
     description: Represents Cdp Query output
     type: object
     properties:
@@ -6393,6 +6426,7 @@ types:
           **Available Version:** 52.0
         type: string
   CdpQueryOutputV2Representation: #USED
+    displayName: Data Cloud Query Output V2
     description: Represents Cdp Query output for V2 API.
     type: object
     properties:
@@ -6400,7 +6434,7 @@ types:
         description: |
           Result data set
 
-          **Type:** Data Cloud Query V2 Row[] (version 55.0 and later)
+          **Type:** Data Cloud Query V2 Row[] (version 55.0 and later), Object[] (version 54.0 only)
 
           **Filter Group and Version:** Small, 54.0
 
@@ -6409,7 +6443,7 @@ types:
         items:
           type: CdpQueryV2RowRepresentation
       dataspace:
-        description: dataspace
+        description: Name of the dataspace.
         type: string
       done:
         description: |
@@ -6430,7 +6464,7 @@ types:
         description: |
           Result metadata set.
 
-          **Type:**  Map<String, Data Cloud Query Metadata Item> (version 55.0 and later)
+          **Type:**  Map<String, Data Cloud Query Metadata Item> (version 55.0 and later), Map<String, Object> (version 54.0)
 
           **Filter Group and Version:** Small, 54.0
 
@@ -6472,6 +6506,7 @@ types:
           **Available Version:** 54.0
         type: string
   CdpQueryV2RowRepresentation: #USED
+    displayName: Data Cloud Query V2 Row
     description: Represents Row in the result of V2 query API
     type: object
     properties:
@@ -6525,6 +6560,7 @@ types:
   #       description: Schedule Time
   #       type: CdpTimeRepresentation
   CdpSegmentActionOutputRepresentation: #USED
+    displayName: Data Cloud Segment Action Output
     description: Segment action.
     type: object
     properties:
@@ -6587,6 +6623,7 @@ types:
   #         //:
   #           type: string
   CdpSegmentContainerOutputRepresentation: #USED
+    displayName: Data Cloud Segment Container Output
     description: Segment container.
     type: object
     properties:
@@ -6646,6 +6683,7 @@ types:
   #       description: DBT SQL
   #       type: string
   CdpSegmentDbtModelOutputRepresentation: #USED
+    displayName: Data Cloud Segment Dbt Model Output
     description: Represents Cdp Segment output Dbt Model
     type: object
     properties:
@@ -6656,6 +6694,7 @@ types:
         description: DBT Model SQL
         type: string
   CdpSegmentDbtPipelineOutputRepresentation: #USED
+    displayName: Data Cloud Segment Dbt Pipeline Output
     description: Represents Cdp Segment output pipeline
     type: object
     properties:
@@ -6672,6 +6711,7 @@ types:
   #       description: EinsteinGptSegmentsUI includeCriteria
   #       type: string
   CdpSegmentInputRepresentation: #USED
+    displayName: Data Cloud Segment Input
     description: Input representation for creating CDP Segment
     type: object
     properties:
@@ -6770,6 +6810,7 @@ types:
   #       description: Seed Segment Name
   #       type: string
   CdpSegmentLookalikeOutputRepresentation: #USED
+    displayName: Data Cloud Segment Lookalike Output
     description: Represents Cdp Segment output Lookalike
     type: object
     properties:
@@ -6781,6 +6822,7 @@ types:
         description: Seed Segment Id for Lookalike
         type: string
   CdpSegmentMemberOutputRepresentation: #USED
+    displayName: Data Cloud Segment Member Output
     description: Data Cloud segment member output.
     type: object
     properties:
@@ -6869,6 +6911,7 @@ types:
           **Available Version:** 58.0
         type: integer
   CdpSegmentMemberRowOutputRepresentation: #USED
+    displayName: Data Cloud Segment Member Row Output
     description: Data Cloud segment member row output.
     type: object
     properties:
@@ -6921,6 +6964,7 @@ types:
           **Available Version:** 58.0
         type: string
   CdpSegmentMembershipTableOutputRepresentation: #USED
+    displayName: Data Cloud Segment Membership Table Output
     description: Data Cloud segment membership table.
     type: object
     properties:
@@ -6958,6 +7002,7 @@ types:
   #       items:
   #         type: object
   CdpSegmentOutputRepresentation: #USED
+    displayName: Data Cloud Segment Output
     description: Segment output.
     type: object
     properties:
@@ -7357,6 +7402,7 @@ types:
   #       description: value specified by user in a rule
   #       type: string
   # DataActionConditionOutputRepresentation:
+  #   displayName: Data Action Condition Output
   #   description: Represents Cdp DataActionCondition output
   #   type: object
   #   properties:
@@ -7392,7 +7438,8 @@ types:
   #     enrichmentName:
   #       description: 'enrichmentName '
   #       type: string
-  # DataActionEnrichmentOutputRepresentation:
+  # DataActionEnrichmentOutputRepresentation: 
+  #   displayName: Data Enrichment Output Representation
   #   description: Represents Cdp DataActionEnrichmentOutput
   #   type: object
   #   properties:
@@ -7423,6 +7470,7 @@ types:
   #       description: ObjectApiName
   #       type: string
   # DataActionProjectedFieldOutputRepresentation:
+  #   displayName: Data Action Projected Field Output
   #   description: Represents Cdp Create DataActionProjectedFieldOutput
   #   type: object
   #   properties:
@@ -7452,6 +7500,7 @@ types:
   #       description: TargetObjectApiName
   #       type: string
   # DataActionRelationshipEdgeOutputRepresentation:
+  #   displayName: Data Action Relationship Edge Output
   #   description: Represents Cdp DataActionRelationshipEdgeOutput
   #   type: object
   #   properties:
@@ -7487,6 +7536,7 @@ types:
   #       description: SourceType
   #       type: string
   # DataActionSourceOutputRepresentation:
+  #   displayName: Data Action Source Output
   #   description: Represents Cdp DataActionSourceOutput
   #   type: object
   #   properties:
@@ -10254,9 +10304,10 @@ types:
               **Available Version:** 57.0
             type: string
             required: true
-  # /data-action-targets:
+  # /data-action-targets: 
+  #   displayName: Data Action Targets
   #   get:
-  #     displayName: getCdpDataActionTargetCollection
+  #     displayName: Data Cloud Data Action Target Collection, Get #getCdpDataActionTargetCollection
   #     description: Gets a paginated result of data action targets
   #     responses:
   #       '200':
@@ -10275,7 +10326,7 @@ types:
   #         type: string
   #         required: false
   #   post:
-  #     displayName: postCdpDataActionTargetCollection
+  #     displayName: Data Cloud Data Action Target Collection, Create #postCdpDataActionTargetCollection
   #     description: Creates a new Data Action Target
   #     responses:
   #       '200':
@@ -10289,14 +10340,15 @@ types:
   #         required: false
   #         (oas-body-name): input
   # /data-action-targets/{apiName}:
+  #   displayName: by Name
   #   delete:
-  #     displayName: deleteCdpDataActionTarget
+  #     displayName: Data Cloud Data Action Target, Delete #deleteCdpDataActionTarget
   #     description: Delete the data action target.
   #     responses:
   #       '200':
   #         description: Success
   #   get:
-  #     displayName: getCdpDataActionTarget
+  #     displayName: Data Cloud Data Action Target, Get #getCdpDataActionTarget
   #     description: Gets the data action target.
   #     responses:
   #       '200':
@@ -10305,7 +10357,7 @@ types:
   #           application/json:
   #             type: CdpDataActionTargetOutputRepresentation
   #   patch:
-  #     displayName: patchCdpDataActionTarget
+  #     displayName: Data Cloud Data Action Target, Update #patchCdpDataActionTarget
   #     description: Update the data action target.
   #     responses:
   #       '200':
@@ -10322,9 +10374,10 @@ types:
   #     apiName:
   #       type: string
   #       required: true
-  # /data-actions:
+  # /data-actions: 
+  #   displayName: Data Actions
   #   get:
-  #     displayName: getCdpDataActionCreation
+  #     displayName: Data Cloud Data Action Creation, Get #getCdpDataActionCreation
   #     description: Gets a paginated result of data actions
   #     responses:
   #       '200':
@@ -10343,7 +10396,7 @@ types:
   #         type: string
   #         required: false
   #   post:
-  #     displayName: postCdpDataActionCreation
+  #     displayName: Data Cloud Data Action Creation, Create #postCdpDataActionCreation
   #     description: Creates a new Data Action
   #     responses:
   #       '200':
@@ -10356,15 +10409,16 @@ types:
   #         type: CdpDataActionInputRepresentation
   #         required: false
   #         (oas-body-name): dataActionInput
-  # /data-actions/{developerName}:
+  # /data-actions/{developerName}: 
+  #   displayName: by Name
   #   delete:
-  #     displayName: deleteCdpDataAction
+  #     displayName: Data Cloud Data Action, Delete #deleteCdpDataAction
   #     description: Delete the data action.
   #     responses:
   #       '200':
   #         description: Success
   #   get:
-  #     displayName: getCdpDataAction
+  #     displayName: Data Cloud Data Action, Get #getCdpDataAction
   #     description: Gets the data action.
   #     responses:
   #       '200':
@@ -10373,7 +10427,7 @@ types:
   #           application/json:
   #             type: CdpDataActionOutputRepresentation
   #   patch:
-  #     displayName: patchCdpDataAction
+  #     displayName: Data Cloud Data Action, Update #patchCdpDataAction
   #     description: Update the data action.
   #     responses:
   #       '200':
@@ -10389,7 +10443,7 @@ types:
   #   uriParameters:
   #     developerName:
   #       type: string
-  #       required: true
+        # required: true
   # /data-enrichments:
   #   get:
   #     displayName: getCdpDataEnrichmentCollection
@@ -11148,7 +11202,7 @@ types:
           queryParameters:
             batchSize:
               description: |
-                Number of items to return. Values are from 1-4, 999. If unspecified, the default value is 4999.
+                Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>4999</code>.
 
                 **Available Version:** 52.0
               type: integer
@@ -11194,12 +11248,7 @@ types:
               required: false
             timeGranularity:
               description: |
-                Time range for the measures. Values are:
-                  - <code>HOUR</code>
-                  - <code>DAY</code>
-                  - <code>MONTH</code>
-                  - <code>QUARTER</code>
-                  - <code>YEAR</code>. 
+                Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
                 
                 If unspecified, no time range is applied.
               
@@ -12093,7 +12142,7 @@ types:
         queryParameters:
           batchSize:
             description: |
-              Number of items to return. Values are from 1-4, 999. If unspecified, the default value is <code>100</code>.
+              Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
 
               **Available Version:** 52.0
             type: integer
@@ -12153,12 +12202,7 @@ types:
             required: false
           timeGranularity:
             description: |
-              Time range for the measures. Values are:
-                  - <code>HOUR</code>
-                  - <code>DAY</code>
-                  - <code>MONTH</code>
-                  - <code>QUARTER</code>
-                  - <code>YEAR</code>. 
+              Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
               
               If unspecified, no time range is applied.
 
@@ -12191,7 +12235,7 @@ types:
         queryParameters:
           batchSize:
             description: |
-              Number of items to return. Values are from 1-4, 999. If unspecified, the default value is <code>100</code>.
+              Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
 
               **Available Version:** 52.
             type: integer
@@ -12202,7 +12246,7 @@ types:
             required: false
           dimensions:
             description: |
-              Comma-separated list of up to 10 dimensions, such as GenderId__c, to project. If unspecified, this parameter includes all of the available dimensions.
+              Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
 
               **Available Version:** 52.0
             type: string
@@ -12251,12 +12295,7 @@ types:
             required: false
           timeGranularity:
             description: |
-              Time range for the measures. Values are:
-                  - <code>HOUR</code>
-                  - <code>DAY</code>
-                  - <code>MONTH</code>
-                  - <code>QUARTER</code>
-                  - <code>YEAR</code>. 
+              Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>.  
               
               If unspecified, no time range is applied.
 
@@ -12293,7 +12332,7 @@ types:
           queryParameters:
             batchSize:
               description: |
-                Number of items to return. Values are from 1-4, 999. If unspecified, the default value is <code>100</code>.
+                Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
 
                 **Available Version:** 52.
               type: integer
@@ -12304,7 +12343,7 @@ types:
               required: false
             dimensions:
               description: |
-                Comma-separated list of up to 10 dimensions, such as <code>GenderId__c,</code> to project. If unspecified, this parameter includes all of the available dimensions.
+                Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
 
                 **Available Version:** 52.0
               type: string
@@ -12353,12 +12392,7 @@ types:
               required: false
             timeGranularity:
               description: |
-                Time range for the measures. Values are:
-                  - <code>HOUR</code>
-                  - <code>DAY</code>
-                  - <code>MONTH</code>
-                  - <code>QUARTER</code>
-                  - <code>YEAR</code>. 
+                Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
                 
                 If unspecified, no time range is applied.
 
@@ -12398,7 +12432,7 @@ types:
           queryParameters:
             batchSize:
               description: |
-                Number of items to return. Values are from 1-4, 999. If unspecified, the default value is <code>100</code>.
+                Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
 
                 **Available Version:** 52.
               type: integer
@@ -12409,21 +12443,21 @@ types:
               required: false
             dimensions:
               description: |
-                Comma-separated list of up to 10 dimensions, such as GenderId__c, to project. If unspecified, this parameter includes all of the available dimensions.
+                Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
 
                 **Available Version:** 52.0
               type: string
               required: false
             fields:
               description: | 
-                Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
+                Comma-separated list of child object field names that you want to include in the result, for example, <code>Id__c,EmailAddress__c</code>. If unspecified, the first 10 alphabetically sorted fields are returned.
 
                 **Available Version:** 52.0
               type: string
               required: false
             filters:
               description: |
-                Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
+                Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>. Filters are applied to the parent object only.
 
                 **Available Version:** 52.0
               type: string
@@ -12458,12 +12492,7 @@ types:
               required: false
             timeGranularity:
               description: |
-                Time range for the measures. Values are:
-                  - <code>HOUR</code>
-                  - <code>DAY</code>
-                  - <code>MONTH</code>
-                  - <code>QUARTER</code>
-                  - <code>YEAR</code>. 
+                Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
                 
                 If unspecified, no time range is applied.
 
@@ -12508,7 +12537,7 @@ types:
       queryParameters:
           batchSize:
             description: |
-              Number of items to return. Values are from 1-4, 999. If unspecified, the default value is <code>100</code>.
+              Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
 
               **Available Version:** 53.0
             type: integer
@@ -12594,7 +12623,7 @@ types:
       description: |
         Get the next batch of data across data model, lake, unified, and linked objects. 
         
-        Initially, use the Data Cloud Query V2 resource to query up to 8 MB of data. Use the nextBatchId from the Data Cloud Query Output V2 response body as the value of nextBatchId in this API to get the next batch of data. You can continue using subsequent next batch IDs for up to an hour.
+        Initially, use the Data Cloud Query V2 resource to query up to 8 MB of data. Use the <code>nextBatchId</code> from the Data Cloud Query Output V2 response body as the value of *nextBatchId* in this API to get the next batch of data. You can continue using subsequent next batch IDs for up to an hour.
         
         **Available Version:** 54.0
       responses:
@@ -12663,7 +12692,7 @@ types:
       queryParameters:
         batchSize:
           description: |
-            Number of items to return. Values are from 1–200. If unspecified, the default value is <code>20</code>GenderId__c.ASC
+            Number of items to return. Values are from 1–200. If unspecified, the default value is <code>20</code>
 
             **Available Version:** 56.0
           type: integer
@@ -12722,7 +12751,6 @@ types:
           type: string
           required: false
       body:
-        description: Segment Input Representation (*CdpSegmentInputRepresentation*)
         application/json:
           description: Segment Input Representation (*CdpSegmentInputRepresenation*)
           type: CdpSegmentInputRepresentation
@@ -12781,7 +12809,7 @@ types:
                 type: CdpSegmentContainerOutputRepresentation
         queryParameters:
           batchSize:
-            description: Number of items to return. Values are from 1-4, 999. If unspecified, the default value is 100.
+            description: Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
             type: integer
             required: false
           dataspace:

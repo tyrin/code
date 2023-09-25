@@ -17,53 +17,83 @@ import argparse
 import json
 import subprocess
 import shlex
+import re
 
 ############################# function to recursively process properties and dictionaries#############################
 def process_id(name):
 	id1=str(name) #stringify the name for the dictionary id
 	id2=re.sub(r'[^\w]', '', id1)
-	id3=re.sub(r'\(', '', id2)
-	#id4=re.sub(r'[^\w]', '', id1)
+	id3=re.sub(r'[()]', '', id2)	
+	#logfile.write(f"  safeid= {id3}\n")
 	return str(id3) 
 	
 def process_text(findtext, replacetext, text):
 	proctext = text.replace(findtext, replacetext)
 	return str(proctext)
 	
-def process_dict(x, id): #where x is the spec dictionary, id is the base id, and c is the configdata
+def process_dict(x, id): #where x is the RAML spec dictionary, id is the base id, and c is the configdata
 	for name, value in x.items():
-		if isinstance(value, dict): #if the value is a dictionary, then process it one way.
+		if isinstance(value, dict): #if the value is a dictionary, then process it one way.s
 			#create new id
 			newdict = x[str(name)]
-			#did1=str(name) #stringify the name for the dictionary id
-			#newdictid=re.sub(r'[^\w]', '', did1)
-			#newid = f'{id}_{newdictid}'
+			#logfile.write(f"  newdict= {newdict}\n name={name}")
 			safeid = process_id(name) #this removes any characters not allowed by dita IDs.
 			newid = f'{id}_{safeid}'
-			process_dict(newdict, newid)
-#	    elif isinstance(search_dict, list):
-#        for element in search_dict:
-#            item = get_recursively(element, field)
-#            if item is not None:
-#                return item
+			if name == "uriParameters":
+				#outputfile.write(f"<section><title>{name}</title>\n  <dl>\n    <dlentry>\n")
+				outputfile.write(f"<p><b>{name}</b></p>\n  <dl id=\"{newid}\">\n")
+				for pname, pvalue in value.items():
+					outputfile.write(f"    <dlentry>\n      <dt><varname>{pname}</varname></dt>\n")
+					for prop, propval in pvalue.items():
+						typestr="type"
+						descstr="description"
+						reqstr="required"
+						if prop == typestr:
+							outputfile.write(f"      <dd>Type: {propval}</dd>\n")
+						elif prop == descstr:
+							outputfile.write(f"      <dd>{propval}</dd>\n")
+						elif prop == reqstr:
+							outputfile.write(f"      <dd>Required: {propval}</dd>\n")
+						else:
+							outputfile.write(f"      <dd>{prop}{propval}</dd>\n") #catchall in case there's something weird
+					outputfile.write(f"    </dlentry>\n")
+				outputfile.write(f"  </dl>\n")
+				#outputfile.write(f"</section>\n")
+			else:
+				outputfile.write(f"<p><b>{name}</b></p>\n")
+				#logfile.write(f"  newiddict= {newid}\n")
+				process_dict(newdict, newid)
+		elif isinstance(value, list): #process enums and any other lists
+			safeid = process_id(name) #this removes any characters not allowed by dita IDs.
+			newid = f'{id}_{safeid}'
+			outputfile.write(f"  <ul id=\"{newid}\">\n")
+			for element in value: #enums are a list, rather than text or a dict
+				outputfile.write(f"  <li>{element}</li>\n")
+			outputfile.write(f"  </ul>\n")
 		else: #if it's just a text value, then
 			#create new id
 			safeid = process_id(name) #this removes any characters not allowed by dita IDs.
 			newid = f'{id}_{safeid}'
+			#logfile.write(f"  newidleaf= {newid}\n")
 			oldtext = str(value)
 			desc = "description"
 			exp = "example"
+			enum = "enum"
 			if safeid == desc: #if it's a description, process it and write it out differently
 				newtext=subprocess.run(['perl','processtext.pl', newid, oldtext], capture_output=True, text=True)
 				#print(newtext.stdout)
 				text= newtext.stdout
-				#outputfile.write(f"      <p>{name}:<ph id=\"{id}_{name}\"> {oldtext}</ph></p>\n")
+				#logfile.write(f"  {name}:{newtext}\n")
+				outputfile.write(f"  <p id=\"{newid}_{name}\">{text}</p>\n")
 			elif safeid == exp:
-				outputfile.write(f"      <codeblock>{oldtext}</codeblock>\n")
+				outputfile.write(f"  <codeblock id=\"{newid}_codeblock\">{oldtext}  </codeblock>\n")
+			#elif safeid == enum:
+			#	newtext=subprocess.run(['perl','processenum.pl', newid, oldtext], capture_output=True, text=True)
+			#	enumtext= newtext.stdout
+			#	logfile.write(f"  {name}:{enumtext}\n")
+			#	outputfile.write(f"  <p id=\"{newid}_{name}\">{enumtext}</p>\n")
 			else:
-				outputfile.write(f"      <p>{name}:<ph id=\"{id}_{name}\"> {oldtext}</ph></p>\n")
-			#newtext=subprocess.Popen(['perl','processtext.pl', newid, oldtext],stdout=subprocess.PIPE)
-			#print(newtext.stdout.read())
+				outputfile.write(f"      <p>{name}:<ph id=\"{newid}\"> {oldtext}</ph></p>\n")
 ############################# parse input arguments #############################
 argParser = argparse.ArgumentParser()
 argParser.add_argument("-t", "--templateFile", help="template file in templates directory",  default="startresource.xml",)
@@ -78,7 +108,8 @@ templatePath = "./templates/%s" % args.templateFile
 print(f"templatePath={templatePath}")
 
 ############################# load files and create output file #############################
-
+#open a log file for troubleshooting
+logfile = open("./output/log.txt", "w")
 #open RAML spec and read it in
 inputfile = open(specPath, "r")
 data = inputfile.read()
@@ -111,3 +142,4 @@ outputfile.write(f"\n    </section>\n")
 outputfile.write(f"  </refbody>\n")
 outputfile.write(f"</reference>")
 outputfile.close()
+logfile.close()

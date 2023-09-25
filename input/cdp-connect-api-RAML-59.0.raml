@@ -6,11 +6,11 @@ version: "59.0"
 mediaType: application/json
 protocols:
 - https
-baseUri: https://{dne_cdpInstanceUrl}/services/data/v{version}
+baseUri: "{dne_cdpInstanceUrl}/services/data/v{version}"
 baseUriParameters:
   dne_cdpInstanceUrl:
     description: The instance_url value returned from the Auth Request in the Data Cloud Connect API Postman Collection.
-    example: https://datacloud-isv-wks29-dev-ed.develop.my.salesforce.com
+    example: https://datacloud-abc-wks29-dev-ed.develop.my.salesforce.com
   version:
     description: Version of the API.
 securitySchemes:
@@ -633,7 +633,7 @@ types:
   #       - Multivalue
   #       - Number
   #       - Text
-  CdpActionResponseBaseRepresentation: #USED
+  CdpActionResponseBaseRepresentation:  
     displayName: Data Cloud Action Response Base
     description: Cdp action result base
     type: object
@@ -652,7 +652,7 @@ types:
           type: CdpErrorRepresentation
       success:
         description: |
-          Indicates whether the call was successful (<code>true</code>) or not (<code>false</code>).
+          Indicates whether the call was successful (`true`) or not (`false`).
 
           **Filter Group and Version:** Big, 57.0
 
@@ -815,7 +815,7 @@ types:
   #     selectedForIngestion:
   #       description: Indicates if the business unit is selected for Ingestion
   #       type: boolean
-  CdpCalculatedInsightCollectionDataRepresentation: #USED
+  CdpCalculatedInsightCollectionDataRepresentation:  
     displayName: Data Cloud Calculated Insight Collection Data
     description: Calculated insight collection data.
     type: object
@@ -858,7 +858,7 @@ types:
           type: CdpCalculatedInsightRepresentation
       nextPageToken:
         description: |
-          Token identifying the next page, or <code>null</code> if there isn't a next page.
+          Token identifying the next page, or `null` if there isn't a next page.
 
           **Filter Group and Version:** Small, 57.0
 
@@ -866,7 +866,7 @@ types:
         type: string
       nextPageUrl:
         description: |
-          Connect REST API URL identifying the next page, or <code>null</code> if there isn't a next page.
+          Connect REST API URL identifying the next page, or `null` if there isn't a next page.
 
           **Filter Group and Version:** Small, 57.0
 
@@ -874,7 +874,7 @@ types:
         type: string
       previousPageToken:
         description: |
-          Token identifying the previous page, or <code>null</code> if there isn't a previous page. 
+          Token identifying the previous page, or `null` if there isn't a previous page. 
 
           **Filter Group and Version:** Small, 57.0
 
@@ -882,7 +882,7 @@ types:
         type: string
       previousPageUrl:
         description: |
-          Connect REST API URL identifying the previous page, or <code>null</code> if there isn't a previous page.
+          Connect REST API URL identifying the previous page, or `null` if there isn't a previous page.
 
           **Filter Group and Version:** Small, 57.0
 
@@ -896,7 +896,7 @@ types:
 
           **Available Version:** 57.0
         type: integer
-  CdpCalculatedInsightCollectionRepresentation: #USED
+  CdpCalculatedInsightCollectionRepresentation:  
     displayName: Data Cloud Calculated Insight Collection
     description: Container of a calculated insights page.
     type: object
@@ -911,7 +911,7 @@ types:
 
           **Available Version:** 57.0
         type: CdpCalculatedInsightCollectionDataRepresentation
-  CdpCalculatedInsightDataSourceRepresentation: #USED
+  CdpCalculatedInsightDataSourceRepresentation:  
     displayName: Data Cloud Calculated Insight Data Source
     description: A calculated insight data source.
     type: object
@@ -922,7 +922,7 @@ types:
       type:
         description: Type
         type: string
-  CdpCalculatedInsightDimensionRepresentation: #USED
+  CdpCalculatedInsightDimensionRepresentation:  
     displayName: Data Cloud Calculated Insight Dimension
     description: A calculated insight dimension.
     type: object
@@ -961,7 +961,7 @@ types:
   #     message:
   #       description: Error message
   #       type: string
-  CdpCalculatedInsightInputRepresentation: #USED
+  CdpCalculatedInsightInputRepresentation:  
     displayName: Data Cloud Calculated Insight Input
     description: Input representation for a calculated insight.
     type: object
@@ -974,7 +974,7 @@ types:
         type: string
       createdFromPackage:
         description: |
-          Specifies whether the calculated insight was created from an installed package (<code>true</code>) or not (<code>false</code>).
+          Specifies whether the calculated insight was created from an installed package (`true`) or not (`false`).
 
           **Available Version:** 57.0
         type: boolean
@@ -1008,7 +1008,7 @@ types:
         type: string
       draft:
         description: |
-          Specifies whether to save the calculated insight as draft (<code>true</code>) or not (<code>false</code>)
+          Specifies whether to save the calculated insight as draft (`true`) or not (`false`)
 
           **Available Version:** 57.0
         type: boolean
@@ -1046,11 +1046,8 @@ types:
           Calculated insight publish schedule start date time
           
           **Expected format:** yyyy-MM-ddTHH:mm
-          <br></br>
-
-          **Root XML tag**: <code>cdpCalculatedInsightInput</code>
         type: string
-  CdpCalculatedInsightMeasureRepresentation: #USED
+  CdpCalculatedInsightMeasureRepresentation:  
     displayName: Data Cloud Calculated Insight Measure
     description: A calculated insight measure.
     type: object
@@ -1079,7 +1076,7 @@ types:
       formula:
         description: Formula
         type: string
-  CdpCalculatedInsightRepresentation: #USED
+  CdpCalculatedInsightRepresentation:  
     displayName: Data Cloud Calculated Insight
     description: |
       A calculated insight.
@@ -1175,7 +1172,7 @@ types:
         type: string
       isEnabled:
         description: |
-          Specifies whether the calculated insight is enabled (<code>true</code>) or not (<code>false</code>).
+          Specifies whether the calculated insight is enabled (`true`) or not (`false`).
 
           **Filter Group and Version:** Small, 57.0
 
@@ -1250,10 +1247,10 @@ types:
       publishScheduleInterval:
         description: |
           Publish schedule interval.
-            - <code>NOT_SCHEDULED</code>
-            - <code>SIX</code>
-            - <code>TWELVE</code>
-            - <code>TWENTY_FOUR</code>
+            - `NOT_SCHEDULED`
+            - `SIX`
+            - `TWELVE`
+            - `TWENTY_FOUR`
         type: string
       publishScheduleStartDateTime:
         description: |
@@ -1261,7 +1258,7 @@ types:
           
           **Expected format:** yyyy-MM-ddTHH:mm
         type: string
-  CdpCalculatedInsightStandardActionResponseRepresentation: #USED
+  CdpCalculatedInsightStandardActionResponseRepresentation:  
     displayName: Data Cloud Calculated Insight Standard Action Response
     description: Response of the calculated insight run action. 
     type: CdpActionResponseBaseRepresentation
@@ -1280,7 +1277,7 @@ types:
           type: CdpErrorRepresentation
       success:
         description: |
-          Indicates whether the call was successful (<code>true</code>) or not (<code>false</code>).
+          Indicates whether the call was successful (`true`) or not (`false`).
 
           **Filter Group and Version:** Big, 57.0
 
@@ -2133,7 +2130,7 @@ types:
   #     token:
   #       description: The 18 char ID.
   #       type: string
-  CdpErrorRepresentation: #USED
+  CdpErrorRepresentation:  
     displayName: Data Cloud Error
     description: Error response.
     type: object
@@ -2306,7 +2303,7 @@ types:
   #     interval:
   #       description: Number of hours between runs.
   #       type: integer
-  CdpIdentityResolutionConfigInput: #USED
+  CdpIdentityResolutionConfigInput:  
     displayName: Data Cloud Identity Resolution Config Input
     description: Input representation for creating a CDP Identity Resolution
     type: object
@@ -2342,7 +2339,7 @@ types:
       rulesetId:
         description: Ruleset Id
         type: string
-  CdpIdentityResolutionConfigPatchInput: #USED
+  CdpIdentityResolutionConfigPatchInput:  
     displayName: Data Cloud Identity Resolution Config Patch Input
     description: Input representation for updating a CDP identity resolution.
     type: object
@@ -2355,7 +2352,7 @@ types:
         type: string
       doesRunAutomatically:
         description: |
-          Specifies whether automatic job run scheduling is enabled for the ruleset (<code>true</code>) or not (<code>false</code>). If unspecified, defaults to <code>false</code>.
+          Specifies whether automatic job run scheduling is enabled for the ruleset (`true`) or not (`false`). If unspecified, defaults to `false`.
 
           **Available Version:** 57.0
         type: boolean
@@ -2424,14 +2421,14 @@ types:
   #     shouldMatchOnBlank:
   #       description: Should match on blank
   #       type: boolean
-  CdpIdentityResolutionMatchCriterionOutput: #USED
+  CdpIdentityResolutionMatchCriterionOutput:  
     displayName: Data Cloud Identity Resolution Match Criterion Output
     description: Identity resolution ruleset match rule criterion.
     type: object
     properties:
       caseSensitiveMatch:
         description: |
-          Specifies whether the criterion match is case sensitive (<code>true</code>) or not (<code>false</code>). Available only when matching is based on the [party identifier](https://help.salesforce.com/s/articleView?id=sf.c360_a_partyidentifier.htm&type=5).
+          Specifies whether the criterion match is case sensitive (`true`) or not (`false`). Available only when matching is based on the [party identifier](https://help.salesforce.com/s/articleView?id=sf.c360_a_partyidentifier.htm&type=5).
 
           **Filter Group and Version:** Small, 58.0
 
@@ -2479,7 +2476,7 @@ types:
         type: CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput
       shouldMatchOnBlank:
         description: |
-          Specifies whether blank fields can be used for matching (<code>true</code>) or not (<code>false</code>).
+          Specifies whether blank fields can be used for matching (`true`) or not (`false`).
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2496,7 +2493,7 @@ types:
   #     partyType:
   #       description: Party Identification type
   #       type: string
-  CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput: #USED
+  CdpIdentityResolutionMatchCriterionPartyIdentificationInfoOutput:  
     displayName: Data Cloud Identity Resolution Match Criterion Party Identificaion Info Output
     description: Information when party identification is used in an identity resolution ruleset's match rule criterion.
     type: object
@@ -2529,7 +2526,7 @@ types:
   #     label:
   #       description: Label
   #       type: string
-  CdpIdentityResolutionMatchRuleOutput: #USED
+  CdpIdentityResolutionMatchRuleOutput:  
     displayName: Data Cloud Identity Resolution Match Rule Output
     description: Identity resolution ruleset's match rule criteria.
     type: object
@@ -2563,7 +2560,7 @@ types:
   #       type: array
   #       items:
   #         type: object
-  CdpIdentityResolutionOutputRepresentation: #USED
+  CdpIdentityResolutionOutputRepresentation:  
     displayName: Data Cloud Identity Resolution Output
     description: Represents Cdp Identity Resolution
     type: object
@@ -2615,7 +2612,7 @@ types:
         type: string
       doesRunAutomatically:
         description: |
-          Specifies whether automatic job run scheduling is enabled for the ruleset (<code>true</code>) or not (<code>false</code>). If unspecified, defaults to <code>false</code>GenderId__c.ASC
+          Specifies whether automatic job run scheduling is enabled for the ruleset (`true`) or not (`false`). If unspecified, defaults to `false`GenderId__c.ASC
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2623,7 +2620,7 @@ types:
         type: boolean
       id:
         description: |
-          Identity resolution ruleset's ID. This is not the identity resolution's extended ruleset ID (<code>rulesetId</code>).
+          Identity resolution ruleset's ID. This is not the identity resolution's extended ruleset ID (`rulesetId`).
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2657,11 +2654,11 @@ types:
       lastJobStatus:
         description: |
           Last job's status. Possible values are:
-            - <code>SUCCESS</code>
-            - <code>IN_PROGRESS</code>
-            - <code>FAIL</code>
-            - <code>SCHEDULED</code>
-            - <code>SKIPPED</code>
+            - `SUCCESS`
+            - `IN_PROGRESS`
+            - `FAIL`
+            - `SCHEDULED`
+            - `SKIPPED`
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2719,12 +2716,12 @@ types:
       rulesetStatus:
         description: |
           Status of a ruleset job. Possible values are: 
-            - <code>NEW</code>
-            - <code>PUBLISHING</code>
-            - <code>PUBLISHED</code>
-            - <code>ERROR</code>
-            - <code>DELETING</code>
-            - <code>DELETE_FAILED</code>
+            - `NEW`
+            - `PUBLISHING`
+            - `PUBLISHED`
+            - `ERROR`
+            - `DELETING`
+            - `DELETE_FAILED`
           
           **Filter Group and Version:** Small, 57.0
 
@@ -2775,7 +2772,7 @@ types:
   #       type: array
   #       items:
   #         type: object
-  CdpIdentityResolutionReconciliationFieldRuleOutput: #USED
+  CdpIdentityResolutionReconciliationFieldRuleOutput:  
     displayName: Data Cloud Identity Resolution Reconciliation Field Rule Output
     description: Identity resolution ruleset's reconciliation rule for a field.
     type: object
@@ -2802,7 +2799,7 @@ types:
         - SourceSequence
       shouldIgnoreEmptyValue:
         description: |
-          Specifies whether to ignore an empty value (<code>true</code>) or not (<code>false</code>).
+          Specifies whether to ignore an empty value (`true`) or not (`false`).
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2810,7 +2807,7 @@ types:
         type: boolean
       sources:
         description: |
-          If <code>ruleType</code> is <code>SourceSequence</code>, a prioritized list of data sources.
+          If `ruleType` is `SourceSequence`, a prioritized list of data sources.
 
           **Type:** Data Cloud Identity Resolution Reconciliation Source Output[]
           
@@ -2856,7 +2853,7 @@ types:
   #       type: array
   #       items:
   #         type: object
-  CdpIdentityResolutionReconciliationRuleOutput: #USED
+  CdpIdentityResolutionReconciliationRuleOutput:  
     displayName: Data Cloud Identity Resolution Reconciliation Rule Output
     description: Identity resolution ruleset's reconciliation rule for an object.
     type: object
@@ -2903,7 +2900,7 @@ types:
         - SourceSequence
       shouldIgnoreEmptyValue:
         description: |
-          Specifies whether to ignore an empty value (<code>true</code>) or not (<code>false</code>).
+          Specifies whether to ignore an empty value (`true`) or not (`false`).
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2911,7 +2908,7 @@ types:
         type: boolean
       sources:
         description: |
-          If <code>ruleType</code> is <code>SourceSequence</code>, a list of data sources in priority order.
+          If `ruleType` is `SourceSequence`, a list of data sources in priority order.
 
           **Filter Group and Version:** Small, 57.0
 
@@ -2943,14 +2940,14 @@ types:
   #     name:
   #       description: Source name
   #       type: string
-  CdpIdentityResolutionReconciliationSourceOutput: #USED
+  CdpIdentityResolutionReconciliationSourceOutput:  
     displayName: Data Cloud Identity Resolution Reconciliation Source Output
     description: Source for an identity resolution default reconciliation rule or field-specific rule using the SourceSequence match method.
     type: object
     properties:
       name:
         description: |
-          If the <code>ruleType</code> for a reconciliation rule is <code>SourceSequence</code>, API name of a source Data Lake Object.
+          If the `ruleType` for a reconciliation rule is `SourceSequence`, API name of a source Data Lake Object.
         
           **Filter Group and Version:** Small, 57.0
 
@@ -2965,7 +2962,7 @@ types:
   #       type: array
   #       items:
   #         type: object
-  CdpIdentityResolutionRunNowInput: #USED
+  CdpIdentityResolutionRunNowInput:  
     displayName: Data Cloud Identity Resolution Run Now Input
     description: Input representation for running an identity resolution on demand.
     type: object
@@ -2982,7 +2979,7 @@ types:
 
           **Available Version:** 57.0
         type: string
-  CdpIdentityResolutionRunNowOutputRepresentation: #USED
+  CdpIdentityResolutionRunNowOutputRepresentation:  
     displayName: Data Cloud Identity Resolution Run Now Output
     description: Identity resolution ruleset run now output.
     type: object
@@ -3000,7 +2997,7 @@ types:
         - IdentityResolutionJobIsAlreadyRunning
         - NoPendingChangesJobRunSkipped
         - SuccessfullySubmittedIdentityResolutionJobRunRequest
-  CdpIdentityResolutionsOutputRepresentation: #USED
+  CdpIdentityResolutionsOutputRepresentation:  
     displayName: Data Cloud Identity Resolutions Output
     description: Identity resolution rulesets.
     type: object
@@ -6310,7 +6307,7 @@ types:
   #     totalSize:
   #       description: Total size of collection
   #       type: integer
-  CdpQueryDataOutputRepresentation: #USED
+  CdpQueryDataOutputRepresentation:  
     displayName: Data Cloud Query Data Output
     description: Query data output.
     type: object
@@ -6325,7 +6322,7 @@ types:
         type: array
         items:
           type: object
-  CdpQueryInputRepresentation: #USED
+  CdpQueryInputRepresentation:  
     displayName: Data Cloud Query Input
     description: Input representation for creating CDP query
     type: object
@@ -6335,11 +6332,8 @@ types:
           ANSI-standard SQL query.
 
           **Available Version:** 52.0
-          <br></br>
-
-          **Root XML tag**: <code>cdpQueryTag</code>
         type: string
-  CdpQueryMetadataItemRepresentation: #USED
+  CdpQueryMetadataItemRepresentation:  
     displayName: Data Cloud Query Metadata Item
     description: Represents Cdp Metadata Item
     type: object
@@ -6353,7 +6347,7 @@ types:
       typeCode:
         description: Metadata Type Code
         type: integer
-  CdpQueryMetadataOutputRepresentation: #USED
+  CdpQueryMetadataOutputRepresentation:  
     displayName: Data Cloud Query Metadata Output
     description: Represents Cdp Query Metadata Output
     type: object
@@ -6370,7 +6364,7 @@ types:
         type: array
         items:
           type: object
-  CdpQueryOutputRepresentation: #USED
+  CdpQueryOutputRepresentation:  
     displayName: Data Cloud Query Output
     description: Represents Cdp Query output
     type: object
@@ -6387,7 +6381,7 @@ types:
           type: object
       done:
         description: |
-          Specifies whether the query is done (<code>true</code>) or not (<code>false</code>). 
+          Specifies whether the query is done (`true`) or not (`false`). 
 
           **Filter Group and Version:** Small, 52.0
           
@@ -6436,7 +6430,7 @@ types:
           
           **Available Version:** 52.0
         type: string
-  CdpQueryOutputV2Representation: #USED
+  CdpQueryOutputV2Representation:  
     displayName: Data Cloud Query Output V2
     description: Represents Cdp Query output for V2 API.
     type: object
@@ -6458,7 +6452,7 @@ types:
         type: string
       done:
         description: |
-          Specifies whether the query is done (<code>true</code>) or not (<code>false</code>).
+          Specifies whether the query is done (`true`) or not (`false`).
 
           **Filter Group and Version:** Small, 54.0
 
@@ -6516,7 +6510,7 @@ types:
 
           **Available Version:** 54.0
         type: string
-  CdpQueryV2RowRepresentation: #USED
+  CdpQueryV2RowRepresentation:  
     displayName: Data Cloud Query V2 Row
     description: Represents Row in the result of V2 query API
     type: object
@@ -6570,7 +6564,7 @@ types:
   #     time:
   #       description: Schedule Time
   #       type: CdpTimeRepresentation
-  CdpSegmentActionOutputRepresentation: #USED
+  CdpSegmentActionOutputRepresentation:  
     displayName: Data Cloud Segment Action Output
     description: Segment action.
     type: object
@@ -6633,7 +6627,7 @@ types:
   #       properties:
   #         //:
   #           type: string
-  CdpSegmentContainerOutputRepresentation: #USED
+  CdpSegmentContainerOutputRepresentation:  
     displayName: Data Cloud Segment Container Output
     description: Segment container.
     type: object
@@ -6693,7 +6687,7 @@ types:
   #     sql:
   #       description: DBT SQL
   #       type: string
-  CdpSegmentDbtModelOutputRepresentation: #USED
+  CdpSegmentDbtModelOutputRepresentation:  
     displayName: Data Cloud Segment Dbt Model Output
     description: Represents Cdp Segment output Dbt Model
     type: object
@@ -6704,7 +6698,7 @@ types:
       sql:
         description: DBT Model SQL
         type: string
-  CdpSegmentDbtPipelineOutputRepresentation: #USED
+  CdpSegmentDbtPipelineOutputRepresentation:  
     displayName: Data Cloud Segment Dbt Pipeline Output
     description: Represents Cdp Segment output pipeline
     type: object
@@ -6721,7 +6715,7 @@ types:
   #     includeCriteria:
   #       description: EinsteinGptSegmentsUI includeCriteria
   #       type: string
-  CdpSegmentInputRepresentation: #USED
+  CdpSegmentInputRepresentation:  
     displayName: Data Cloud Segment Input
     description: Input representation for creating CDP Segment
     type: object
@@ -6767,9 +6761,6 @@ types:
       lookalikeCriteria:
         description: |
           Lookalike segment criteria
-          <br></br>
-
-          **Root XML tag:** <code>cdpSegment</code> 
         type: object
       publishSchedule:
         description: |
@@ -6787,13 +6778,13 @@ types:
         - Two
       publishScheduleEndDate:
         description: |
-          Date indicating the end of the publish schedule. Optional if <code>publishSchedule</code> is unspecified.
+          Date indicating the end of the publish schedule. Optional if `publishSchedule` is unspecified.
 
           **Available Version:** 55.0
         type: string
       publishScheduleStartDateTime:
         description: |
-          Datetime indicating the start of the publish schedule. Optional if <code>publishSchedule</code> is unspecified.
+          Datetime indicating the start of the publish schedule. Optional if `publishSchedule` is unspecified.
 
           **Available Version:** 55.0
         type: string
@@ -6824,7 +6815,7 @@ types:
   #     seedSegmentName:
   #       description: Seed Segment Name
   #       type: string
-  CdpSegmentLookalikeOutputRepresentation: #USED
+  CdpSegmentLookalikeOutputRepresentation:  
     displayName: Data Cloud Segment Lookalike Output
     description: Represents Cdp Segment output Lookalike
     type: object
@@ -6836,7 +6827,7 @@ types:
       seedSegmentId:
         description: Seed Segment Id for Lookalike
         type: string
-  CdpSegmentMemberOutputRepresentation: #USED
+  CdpSegmentMemberOutputRepresentation:  
     displayName: Data Cloud Segment Member Output
     description: Data Cloud segment member output.
     type: object
@@ -6925,14 +6916,14 @@ types:
 
           **Available Version:** 58.0
         type: integer
-  CdpSegmentMemberRowOutputRepresentation: #USED
+  CdpSegmentMemberRowOutputRepresentation:  
     displayName: Data Cloud Segment Member Row Output
     description: Data Cloud segment member row output.
     type: object
     properties:
       deltaType:
         description: |
-          Delta type, for example, <code>new</code>, <code>existing</code>, or <code>removed</code>.
+          Delta type, for example, `new`, `existing`, or `removed`.
 
           **Filter Group and Version:** Small, 58.0
 
@@ -6956,7 +6947,7 @@ types:
         type: string
       snapshotType:
         description: |
-          Type of snapshot for example, <code>full</code>, <code>incremental</code>.
+          Type of snapshot for example, `full`, `incremental`.
 
           **Filter Group and Version:** Small, 58.0
 
@@ -6978,7 +6969,7 @@ types:
 
           **Available Version:** 58.0
         type: string
-  CdpSegmentMembershipTableOutputRepresentation: #USED
+  CdpSegmentMembershipTableOutputRepresentation:  
     displayName: Data Cloud Segment Membership Table Output
     description: Data Cloud segment membership table.
     type: object
@@ -7016,7 +7007,7 @@ types:
   #       type: array
   #       items:
   #         type: object
-  CdpSegmentOutputRepresentation: #USED
+  CdpSegmentOutputRepresentation:  
     displayName: Data Cloud Segment Output
     description: Segment output.
     type: object
@@ -10049,7 +10040,7 @@ types:
       queryParameters:
         batchSize:
           description: |
-            Number of items to return. Values are from 1-300. If unspecified, the default value is <code>25</code>.
+            Number of items to return. Values are from 1-300. If unspecified, the default value is `25`.
             
             **Available Version:** 57.0
           type: integer
@@ -10064,9 +10055,9 @@ types:
         definitionType:
           description: |
             Definition type of the calculated insight. Values are:
-              - <code>CalculatedMetric</code>
-              - <code>ExternalMetric</code>
-              - <code>StreamingMetric</code>
+              - `CalculatedMetric`
+              - `ExternalMetric`
+              - `StreamingMetric`
             
             **Available Version:** 57.0
           type: string
@@ -10080,14 +10071,14 @@ types:
           required: false
         orderby:
           description: |
-            Sort order for the result set, seuch as <code>GenderId__c.ASC, Occupation__c.DESC</code>. If unspecified, items are returned in the order they are retrieved.
+            Sort order for the result set, seuch as `GenderId__c.ASC, Occupation__c.DESC`. If unspecified, items are returned in the order they are retrieved.
 
             **Available Version:** 57.0
           type: string
           required: false
         pageToken:
           description: |
-            Specifies the page token to use to view a page of information. Page tokens are returned as part of the response, such as <code>currentPageToken</code> or <code>nextPageToken</code>. If unspecified, the first page is returned.
+            Specifies the page token to use to view a page of information. Page tokens are returned as part of the response, such as `currentPageToken` or `nextPageToken`. If unspecified, the first page is returned.
           
             **Available Version:** 57.0
           type: string
@@ -10098,6 +10089,8 @@ types:
         Create a calculated insight.
 
         **Available Version:** 57.0
+
+        **Root XML tag:** `<cdpCalculatedInsightInput>`
       responses:
         '200':
           description: |
@@ -10176,6 +10169,8 @@ types:
           Update a calculated insight.
         
           **Available Version:** 57.0
+
+          **Root XML tag:** `<cdpCalculatedInsightInput>`
         responses:
           '200':
             description: |
@@ -11212,7 +11207,7 @@ types:
           queryParameters:
             batchSize:
               description: |
-                Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>4999</code>.
+                Number of items to return. Values are from 1-4,999. If unspecified, the default value is `4999`.
 
                 **Available Version:** 52.0
               type: integer
@@ -11223,21 +11218,21 @@ types:
               required: false
             dimensions:
               description: |
-                Comma-separated list of up to 10 dimensions, such as <code>GenderId__c,</code> to project. If unspecified, this parameter includes all of the available dimensions.
+                Comma-separated list of up to 10 dimensions, such as `GenderId__c,` to project. If unspecified, this parameter includes all of the available dimensions.
               
                 **Available Version:** 52.0
               type: string
               required: false
             filters:
               description: |
-                Filter the result set to a more narrow scope or specific type, such as <code>[GenderId__c=Male,​FirstName__c=Angel]</code>.
+                Filter the result set to a more narrow scope or specific type, such as `[GenderId__c=Male,​FirstName__c=Angel]`.
               
                 **Available Version:** 52.0
               type: string
               required: false
             measures:
               description: |
-                Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+                Comma-separated list of up to 5 measures, such as `TotalSales__c,` to project. If unspecified, this parameter includes all of the available measures.
 
                 **Available Version:** 52.0
               type: string
@@ -11251,14 +11246,14 @@ types:
               required: false
             orderby:
               description: |
-                Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+                Sort order for the result set, such as `GenderId__c ASC,​Occupation__c DESC`. If unspecified, items are returned in the order they are retrieved.
               
                 **Available Version:** 52.0
               type: string
               required: false
             timeGranularity:
               description: |
-                Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+                Time range for the measures. Values are: `HOUR`, `DAY`, `MONTH`, `QUARTER`, or `YEAR`. 
                 
                 If unspecified, no time range is applied.
               
@@ -12039,21 +12034,21 @@ types:
           required: false
         entityCategory:
           description: |
-            Category of the metadata entity. Valid values are <code>Profile</code>, <code>Engagement</code>, and <code>Related</code>. If unspecified, all category entities are returned.
+            Category of the metadata entity. Valid values are `Profile`, `Engagement`, and `Related`. If unspecified, all category entities are returned.
 
             **Available Version:** 54.0
           type: string
           required: false
         entityName:
           description: |
-            Metadata name of the entity, for example <code>UnifiedIndividual__dlm</code>. If unspecified, a complete list of entities is returned.
+            Metadata name of the entity, for example `UnifiedIndividual__dlm`. If unspecified, a complete list of entities is returned.
 
             **Available Version:** 54.0
           type: string
           required: false
         entityType:
           description: |
-            Type of metadata entity requested. Valid values are <code>DataLakeObject</code>, <code>DataModelObject</code>, and <code>CalculatedInsight</code>. If unspecified, all types are returned.
+            Type of metadata entity requested. Valid values are `DataLakeObject`, `DataModelObject`, and `CalculatedInsight`. If unspecified, all types are returned.
 
             **Available Version:** 54.0
           type: string
@@ -12152,7 +12147,7 @@ types:
         queryParameters:
           batchSize:
             description: |
-              Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+              Number of items to return. Values are from 1-4,999. If unspecified, the default value is `100`.
 
               **Available Version:** 52.0
             type: integer
@@ -12163,28 +12158,28 @@ types:
             required: false
           dimensions:
             description: |
-              Comma-separated list of up to 10 dimensions, such as <code>GenderId__c,</code> to project. If unspecified, this parameter includes all of the available dimensions.
+              Comma-separated list of up to 10 dimensions, such as `GenderId__c,` to project. If unspecified, this parameter includes all of the available dimensions.
 
               **Available Version:** 52.0
             type: string
             required: false
           fields:
             description: |
-              Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
+              Comma-separated list of up to 50 field names that you want to include in the result, for example, `Id__c,FirstName__c`, `GenderId__c,Occupation__c`. If unspecified, `Id__c` is returned.
 
               **Available Version:** 52.0
             type: string
             required: false
           filters:
             description: |
-              Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
+              Comma-separated list of equality expressions within square brackets, for example, `[FirstName__c=DON]`.
 
               **Available Version:** 52.0
             type: string
             required: false #true?
           measures:
             description: |
-              Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+              Comma-separated list of up to 5 measures, such as `TotalSales__c,` to project. If unspecified, this parameter includes all of the available measures.
 
               **Available Version:** 52.0
             type: string
@@ -12198,21 +12193,21 @@ types:
             required: false
           orderby:
             description: |
-              Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+              Sort order for the result set, such as `GenderId__c ASC,​Occupation__c DESC`. If unspecified, items are returned in the order they are retrieved.
 
               **Available Version:** 52.0
             type: string
             required: false
           searchKey:
             description: | 
-              If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+              If a field other than the primary key is used, name of the key field, for example, `FirstName__c`. Parameter is required for secondary key. 
 
               **Available Version:** 52.0
             type: string
             required: false
           timeGranularity:
             description: |
-              Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+              Time range for the measures. Values are: `HOUR`, `DAY`, `MONTH`, `QUARTER`, or `YEAR`. 
               
               If unspecified, no time range is applied.
 
@@ -12245,7 +12240,7 @@ types:
         queryParameters:
           batchSize:
             description: |
-              Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+              Number of items to return. Values are from 1-4,999. If unspecified, the default value is `100`.
 
               **Available Version:** 52.
             type: integer
@@ -12256,28 +12251,28 @@ types:
             required: false
           dimensions:
             description: |
-              Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
+              Comma-separated list of up to 10 dimensions, such as `GenderId__c`, to project. If unspecified, this parameter includes all of the available dimensions.
 
               **Available Version:** 52.0
             type: string
             required: false
           fields:
             description: | 
-              Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
+              Comma-separated list of up to 50 field names that you want to include in the result, for example, `Id__c,FirstName__c`, `GenderId__c,Occupation__c`. If unspecified, `Id__c` is returned.
 
               **Available Version:** 52.0
             type: string
             required: false
           filters:
             description: |
-              Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
+              Comma-separated list of equality expressions within square brackets, for example, `[FirstName__c=DON]`.
 
               **Available Version:** 52.0
             type: string
             required: false
           measures:
             description: |
-              Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+              Comma-separated list of up to 5 measures, such as `TotalSales__c,` to project. If unspecified, this parameter includes all of the available measures.
             
               **Available Version:** 52.0
             type: string
@@ -12291,21 +12286,21 @@ types:
             required: false
           orderby:
             description: |
-              Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+              Sort order for the result set, such as `GenderId__c ASC,​Occupation__c DESC`. If unspecified, items are returned in the order they are retrieved.
 
               **Available Version:** 52.0
             type: string
             required: false
           searchKey:
             description: | 
-              If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+              If a field other than the primary key is used, name of the key field, for example, `FirstName__c`. Parameter is required for secondary key. 
 
               **Available Version:** 52.0
             type: string
             required: false
           timeGranularity:
             description: |
-              Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>.  
+              Time range for the measures. Values are: `HOUR`, `DAY`, `MONTH`, `QUARTER`, or `YEAR`.  
               
               If unspecified, no time range is applied.
 
@@ -12321,107 +12316,109 @@ types:
           description: ID of the data model object (value of the primary or secondary key field).
           type: string
           required: true
-      /calculated-insights/{ciName}:
-        displayName: by Calculated Insight Name
-        get:
-          displayName: Data Cloud Profile Query, Data Model Object and Calculated Insight Object with Search Key
-          description: |
-            Query a Profile data model object and a Calculated Insight object using filters and a search key.
-            
-            **Available Version:** 52.0
-          responses:
-            '200':
-              description: |
-                Success
-                
-                Data Cloud Query Output (*CdpQueryOutputRepresentation*)
-                <br></br>
-              body:
-                application/json:
-                  type: CdpQueryOutputRepresentation
-          queryParameters:
-            batchSize:
-              description: |
-                Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
-
-                **Available Version:** 52.
-              type: integer
-              required: false
-            dataspace:
-              description: Name of the dataspace.
-              type: string
-              required: false
-            dimensions:
-              description: |
-                Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
-
-                **Available Version:** 52.0
-              type: string
-              required: false
-            fields:
-              description: | 
-                Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c</code>, <code>GenderId__c,Occupation__c</code>. If unspecified, <code>Id__c</code> is returned.
-
-                **Available Version:** 52.0
-              type: string
-              required: false
-            filters:
-              description: |
-                Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>.
-
-                **Available Version:** 52.0
-              type: string
-              required: false
-            measures:
-              description: |
-                Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+      /calculated-insights:
+        displayName: by Calculated Insights
+        /{ciName}:
+          displayName: by Calculated Insight Name
+          get:
+            displayName: Data Cloud Profile Query, Data Model Object and Calculated Insight Object with Search Key
+            description: |
+              Query a Profile data model object and a Calculated Insight object using filters and a search key.
               
-                **Available Version:** 52.0
-              type: string
-              required: false
-            offset:
-              description: |
-                Number of rows to skip before returning results. If unspecified, no rows are skipped.
+              **Available Version:** 52.0
+            responses:
+              '200':
+                description: |
+                  Success
+                  
+                  Data Cloud Query Output (*CdpQueryOutputRepresentation*)
+                  <br></br>
+                body:
+                  application/json:
+                    type: CdpQueryOutputRepresentation
+            queryParameters:
+              batchSize:
+                description: |
+                  Number of items to return. Values are from 1-4,999. If unspecified, the default value is `100`.
+
+                  **Available Version:** 52.
+                type: integer
+                required: false
+              dataspace:
+                description: Name of the dataspace.
+                type: string
+                required: false
+              dimensions:
+                description: |
+                  Comma-separated list of up to 10 dimensions, such as `GenderId__c`, to project. If unspecified, this parameter includes all of the available dimensions.
+
+                  **Available Version:** 52.0
+                type: string
+                required: false
+              fields:
+                description: | 
+                  Comma-separated list of up to 50 field names that you want to include in the result, for example, `Id__c,FirstName__c`, `GenderId__c,Occupation__c`. If unspecified, `Id__c` is returned.
+
+                  **Available Version:** 52.0
+                type: string
+                required: false
+              filters:
+                description: |
+                  Comma-separated list of equality expressions within square brackets, for example, `[FirstName__c=DON]`.
+
+                  **Available Version:** 52.0
+                type: string
+                required: false
+              measures:
+                description: |
+                  Comma-separated list of up to 5 measures, such as `TotalSales__c,` to project. If unspecified, this parameter includes all of the available measures.
                 
-                **Available Version:** 52.0
-              type: integer
-              required: false
-            orderby:
-              description: |
-                Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+                  **Available Version:** 52.0
+                type: string
+                required: false
+              offset:
+                description: |
+                  Number of rows to skip before returning results. If unspecified, no rows are skipped.
+                  
+                  **Available Version:** 52.0
+                type: integer
+                required: false
+              orderby:
+                description: |
+                  Sort order for the result set, such as `GenderId__c ASC,​Occupation__c DESC`. If unspecified, items are returned in the order they are retrieved.
 
-                **Available Version:** 52.0
-              type: string
-              required: false
-            searchKey:
-              description: | 
-                If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+                  **Available Version:** 52.0
+                type: string
+                required: false
+              searchKey:
+                description: | 
+                  If a field other than the primary key is used, name of the key field, for example, `FirstName__c`. Parameter is required for secondary key. 
 
-                **Available Version:** 52.0
-              type: string
-              required: false
-            timeGranularity:
-              description: |
-                Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
-                
-                If unspecified, no time range is applied.
+                  **Available Version:** 52.0
+                type: string
+                required: false
+              timeGranularity:
+                description: |
+                  Time range for the measures. Values are: `HOUR`, `DAY`, `MONTH`, `QUARTER`, or `YEAR`. 
+                  
+                  If unspecified, no time range is applied.
 
-                **Available Version:** 54.0
+                  **Available Version:** 54.0
+                type: string
+                required: false
+          uriParameters:
+            ciName:
+              description: Name of the calculated insight object.
               type: string
-              required: false
-        uriParameters:
-          ciName:
-            description: Name of the calculated insight object.
-            type: string
-            required: true
-          dataModelName:
-            description: Name of the data model object.
-            type: string
-            required: true
-          id:
-            description: ID of the data model object (value of the primary or secondary key field).
-            type: string
-            required: true
+              required: true
+            dataModelName:
+              description: Name of the data model object.
+              type: string
+              required: true
+            id:
+              description: ID of the data model object (value of the primary or secondary key field).
+              type: string
+              required: true
       /{childDataModelName}:
         get:
           displayName: Data Cloud Profile Query, Data Model Object and Child Object with Search Key
@@ -12442,7 +12439,7 @@ types:
           queryParameters:
             batchSize:
               description: |
-                Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+                Number of items to return. Values are from 1-4,999. If unspecified, the default value is `100`.
 
                 **Available Version:** 52.
               type: integer
@@ -12453,28 +12450,28 @@ types:
               required: false
             dimensions:
               description: |
-                Comma-separated list of up to 10 dimensions, such as <code>GenderId__c</code>, to project. If unspecified, this parameter includes all of the available dimensions.
+                Comma-separated list of up to 10 dimensions, such as `GenderId__c`, to project. If unspecified, this parameter includes all of the available dimensions.
 
                 **Available Version:** 52.0
               type: string
               required: false
             fields:
               description: | 
-                Comma-separated list of child object field names that you want to include in the result, for example, <code>Id__c,EmailAddress__c</code>. If unspecified, the first 10 alphabetically sorted fields are returned.
+                Comma-separated list of child object field names that you want to include in the result, for example, `Id__c,EmailAddress__c`. If unspecified, the first 10 alphabetically sorted fields are returned.
 
                 **Available Version:** 52.0
               type: string
               required: false
             filters:
               description: |
-                Comma-separated list of equality expressions within square brackets, for example, <code>[FirstName__c=DON]</code>. Filters are applied to the parent object only.
+                Comma-separated list of equality expressions within square brackets, for example, `[FirstName__c=DON]`. Filters are applied to the parent object only.
 
                 **Available Version:** 52.0
               type: string
               required: false
             measures:
               description: |
-                Comma-separated list of up to 5 measures, such as <code>TotalSales__c,</code> to project. If unspecified, this parameter includes all of the available measures.
+                Comma-separated list of up to 5 measures, such as `TotalSales__c,` to project. If unspecified, this parameter includes all of the available measures.
               
                 **Available Version:** 52.0
               type: string
@@ -12488,21 +12485,21 @@ types:
               required: false
             orderby:
               description: |
-                Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+                Sort order for the result set, such as `GenderId__c ASC,​Occupation__c DESC`. If unspecified, items are returned in the order they are retrieved.
 
                 **Available Version:** 52.0
               type: string
               required: false
             searchKey:
               description: | 
-                If a field other than the primary key is used, name of the key field, for example, <code>FirstName__c</code>. Parameter is required for secondary key. 
+                If a field other than the primary key is used, name of the key field, for example, `FirstName__c`. Parameter is required for secondary key. 
 
                 **Available Version:** 52.0
               type: string
               required: false
             timeGranularity:
               description: |
-                Time range for the measures. Values are: <code>HOUR</code>, <code>DAY</code>, <code>MONTH</code>, <code>QUARTER</code>, or <code>YEAR</code>. 
+                Time range for the measures. Values are: `HOUR`, `DAY`, `MONTH`, `QUARTER`, or `YEAR`. 
                 
                 If unspecified, no time range is applied.
 
@@ -12531,6 +12528,8 @@ types:
         
         **Available Version:** 52.0
 
+        **Root XML tag:** `<cdpQueryTag>`
+
         >**Note**
         >
         >A newer version of the Query API is available. We recommend using Query V2 API to take advantage of GET calls in addition to POST calls, subsequent requests, and larger response sizes.
@@ -12547,7 +12546,7 @@ types:
       queryParameters:
           batchSize:
             description: |
-              Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+              Number of items to return. Values are from 1-4,999. If unspecified, the default value is `100`.
 
               **Available Version:** 53.0
             type: integer
@@ -12565,7 +12564,7 @@ types:
             required: false
           orderby:
             description: |
-              Sort order for the result set, such as <code>GenderId__c ASC,​Occupation__c DESC</code>. If unspecified, items are returned in the order they are retrieved.
+              Sort order for the result set, such as `GenderId__c ASC,​Occupation__c DESC`. If unspecified, items are returned in the order they are retrieved.
             
               **Available Version:** 53.0
             type: string
@@ -12600,6 +12599,8 @@ types:
         Query up to 8 MB of data across data model, lake, unified, and linked objects.
         
         **Available Version:** 54.0
+
+        **Root XML tag:** `<cdpQueryTag>`
       responses:
         '200':
           description: |
@@ -12609,7 +12610,7 @@ types:
 
             >**Note**
             >
-            >Use the <code>nextBatchId</code> from the Data Cloud Query Output V2 response body as the *nextBatchId* parameter in the Data Cloud Query Batch resource to get the next batch of data.
+            >Use the `nextBatchId` from the Data Cloud Query Output V2 response body as the *nextBatchId* parameter in the Data Cloud Query Batch resource to get the next batch of data.
             <br></br>
           body:
             application/json:
@@ -12633,7 +12634,7 @@ types:
       description: |
         Get the next batch of data across data model, lake, unified, and linked objects. 
         
-        Initially, use the Data Cloud Query V2 resource to query up to 8 MB of data. Use the <code>nextBatchId</code> from the Data Cloud Query Output V2 response body as the value of *nextBatchId* in this API to get the next batch of data. You can continue using subsequent next batch IDs for up to an hour.
+        Initially, use the Data Cloud Query V2 resource to query up to 8 MB of data. Use the `nextBatchId` from the Data Cloud Query Output V2 response body as the value of *nextBatchId* in this API to get the next batch of data. You can continue using subsequent next batch IDs for up to an hour.
         
         **Available Version:** 54.0
       responses:
@@ -12702,7 +12703,7 @@ types:
       queryParameters:
         batchSize:
           description: |
-            Number of items to return. Values are from 1–200. If unspecified, the default value is <code>20</code>
+            Number of items to return. Values are from 1–200. If unspecified, the default value is `20`
 
             **Available Version:** 56.0
           type: integer
@@ -12720,7 +12721,7 @@ types:
           required: false
         orderby:
           description: |
-            Sort order for the result set, such as <code>Name ASC</code> or <code>MarketSegmentType DESC</code>. If unspecified, items are returned by ID in ascending order.
+            Sort order for the result set, such as `Name ASC` or `MarketSegmentType DESC`. If unspecified, items are returned by ID in ascending order.
           
             **Available Version**: 56.0
           type: string
@@ -12745,6 +12746,8 @@ types:
         Create a segment.
         
         **Available Version**: 55.0
+
+        **Root XML tag:** `<cdpSegment>` 
       responses:
         '200':
           description: |
@@ -12819,7 +12822,7 @@ types:
                 type: CdpSegmentContainerOutputRepresentation
         queryParameters:
           batchSize:
-            description: Number of items to return. Values are from 1-4,999. If unspecified, the default value is <code>100</code>.
+            description: Number of items to return. Values are from 1-4,999. If unspecified, the default value is `100`.
             type: integer
             required: false
           dataspace:
@@ -12840,6 +12843,8 @@ types:
           Update a segment.
           
           **Available Version:** 56.0
+
+          **Root XML tag:** `<cdpSegment>`
         responses:
           '200':
             description: |
@@ -12936,7 +12941,7 @@ types:
           queryParameters:
             fields:
               description: |
-                Comma-separated list of up to 50 field names that you want to include in the result, for example, <code>Id__c,FirstName__c,​GenderId__c,Occupation__c</code>. If unspecified, Id__c is returned.
+                Comma-separated list of up to 50 field names that you want to include in the result, for example, `Id__c,FirstName__c,​GenderId__c,Occupation__c`. If unspecified, Id__c is returned.
 
                 **Available Version:** 58.0
               type: array
@@ -12946,14 +12951,14 @@ types:
                 (oas-collectionFormat): csv
             filters:
               description: |
-                Filter the result set to a more narrow scope or specific type, such as <code>[GenderId__c=Male,​FirstName__c=Angel]</code>. 
+                Filter the result set to a more narrow scope or specific type, such as `[GenderId__c=Male,​FirstName__c=Angel]`. 
 
                 **Available Version:** 58.0
               type: string
               required: false
             limit:
               description: |
-                Maximum number of rows to return from <code>1</code>–<code>1000</code>. If unspecified, the default number of rows is <code>100</code>.
+                Maximum number of rows to return from `1`–`1000`. If unspecified, the default number of rows is `100`.
 
                 **Available Version:** 58.0
               type: integer
@@ -12967,7 +12972,7 @@ types:
               required: false
             orderBy:
               description: |
-                Sort order for the result set, such as <code>Name ASC</code> or <code>MarketSegmentType DESC</code>. If unspecified, items are returned by ID in ascending order.
+                Sort order for the result set, such as `Name ASC` or `MarketSegmentType DESC`. If unspecified, items are returned by ID in ascending order.
 
                 **Available Version:** 58.0
               type: string
@@ -12979,76 +12984,83 @@ types:
             required: true
     /{segmentId}:
       displayName: by Segment ID
-      /actions/publish:
-        displayName: Segments by Segment ID
-        post:
-          displayName: Data Cloud Segment, Publish
-          description: |
-            Publish a segment.
+      /actions: 
+        displayName: Actions
+        /publish:
+          displayName: Publish
+          post:
+            displayName: Data Cloud Segment, Publish
+            description: |
+              Publish a segment.
 
-            **Available Version:** 58.0
+              **Available Version:** 58.0
 
-            >**Note**
-            >
-            >POST doesn't take request parameters or a request body.
-          responses:
-            '200':
-              description: |
-                Success
+              >**Note**
+              >
+              >POST doesn't take request parameters or a request body.
+            responses:
+              '200':
+                description: |
+                  Success
 
-                Data Cloud Segment Action Output (*CdpSegmentActionOutputRepresentation*)
-                <br></br>
-              body:
-                application/json:
-                  type: CdpSegmentActionOutputRepresentation
-        uriParameters:
-          segmentId:
-            description: ID of the segment.
-            type: string
-            required: true
+                  Data Cloud Segment Action Output (*CdpSegmentActionOutputRepresentation*)
+                  <br></br>
+                body:
+                  application/json:
+                    type: CdpSegmentActionOutputRepresentation
+          uriParameters:
+            segmentId:
+              description: ID of the segment.
+              type: string
+              required: true
   /universalIdLookup:
     displayName: Universal Lookup ID
     /{entityName}:
       displayName: by Entity Name
-      /{dataSourceId}/{dataSourceObjectId}/{sourceRecordId}:
-        get:
-          displayName: Data Cloud Universal ID Lookup
-          description: |
-            Look up objects by source ID.
-
-            **Available Version:** 54.0
-          responses:
-            '200':
+      /{dataSourceId}:
+        displayName: by Data Source ID
+        /{dataSourceObjectId}: 
+          displayName: by Data Source Object ID
+          /{sourceRecordId}:
+            displayName: by Source Record ID
+            get:
+              displayName: Data Cloud Universal ID Lookup
               description: |
-                Success
+                Look up objects by source ID.
 
-                Data Cloud Query Data Output (*CdpQueryDataOutputRepresentation*)
-                <br></br>
-              body:
-                application/json:
-                  type: CdpQueryDataOutputRepresentation
-          queryParameters:
-            dataspace:
-              description: Name of the dataspace.
-              type: string
-              required: false
-        uriParameters:
-          dataSourceId:
-            description: The name of the bridge table entity.
-            type: string
-            required: true
-          dataSourceObjectId:
-            description: ID of the data source.
-            type: string
-            required: true
-          entityName:
-            description: ID of the data source object.
-            type: string
-            required: true
-          sourceRecordId:
-            description: ID of the source record.
-            type: string
-            required: true
+                **Available Version:** 54.0
+              responses:
+                '200':
+                  description: |
+                    Success
+
+                    Data Cloud Query Data Output (*CdpQueryDataOutputRepresentation*)
+                    <br></br>
+                  body:
+                    application/json:
+                      type: CdpQueryDataOutputRepresentation
+              queryParameters:
+                dataspace:
+                  description: Name of the dataspace.
+                  type: string
+                  required: false
+            uriParameters:
+              dataSourceId:
+                description: The name of the bridge table entity.
+                type: string
+                required: true
+              dataSourceObjectId:
+                description: ID of the data source.
+                type: string
+                required: true
+              entityName:
+                description: ID of the data source object.
+                type: string
+                required: true
+              sourceRecordId:
+                description: ID of the source record.
+                type: string
+                required: true
 
 
 
