@@ -3,7 +3,7 @@ These instructions assume you're working on a mac.
 
 To generate the resources file for the Connect API:
 1) Install:
-	python3
+	python3 (you can download and install this from https://www.python.org/downloads/)
 	pip3 install requirements.txt
 2) You need the following files and folders:
    input (put the spec in this folder)
