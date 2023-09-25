@@ -1,7 +1,6 @@
 #!/usr/local/bin/perl
 # Author: Tyrin Avery 8/23
-# to run python3 r2dita.py -s specfile -t templatefile
-# defaults to python3 r2dita.py -s final.raml  -t startresource.xml
+# to run python3 ca2dita.py -s specfile -t templatefile
 # example python3 ca2dita.py -s cdp-connect-api-RAML-59.0.raml
 import yaml
 import xmltodict
