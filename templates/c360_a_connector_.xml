@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="c360_a_connector_{name}" xml:lang="en-us">
+<title>{label} Connector (Beta)</title>
+<shortdesc><!--Populated from the json file stored in your local repository.-->{description}</shortdesc>
+<prolog><metadata>
+   <!--All help topics require categories. The topic type category is set automatically.-->
+   <othermeta content="concept" name="topic_type"/>
+   <!-- Delete the othermeta elements which are not needed based on your topic's content. -->
+   <othermeta content="" name="app_area"/>
+   <othermeta content="" name="role"/>
+   <othermeta content="" name="edition"/>
+   <othermeta content="" name="ui_platform" />
+  </metadata></prolog>
+  <conbody>
+    <?oxy_comment_start author="lng" timestamp="20240429T134103-0700" comment="Susan Oliver to draft up reusable content to reference Data Cloud Connector Team email alias."?>
+    <note
+      conref="../dev/doc/248/patch/core/en/xmlsource/resource_files/reusable_genie/reusable_genie_disclaimer.xml#reusable_genie_disclaimer/perm_set_names_table"/><?oxy_comment_end?>
+    <p><!--Delete this section as needed. Be sure the limits/considerations are generic for this specific connector.-->When
+      working with the {label} connector, keep these behaviors in mind. </p>
+    <?oxy_comment_start author="lng" timestamp="20240424T131456-0700" comment="This section will change based on the connector or it could be blank."?>
+    <ul>
+      <li>An {label} connector can have only a single object in its schema.</li>
+      <li>You can’t reuse an {label} source in multiple {label} connections in Data Cloud.</li>
+    </ul><?oxy_comment_end?>
+  </conbody>
+</concept>
+

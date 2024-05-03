@@ -1,7 +1,14 @@
-*CONNECT API utility*
+# CONNECT API utility
 These instructions assume you're working on a mac.
+To generate a resource file to conref into Apex.
 
-To generate the resources file for the Connect API:
+## CLONE
+
+1) Clone the code utilities repo into your home directory. If you're successful, the path to it is:
+   /Users/(yourname)/code
+
+## INSTALL
+
 1) Install:
 	python3 (you can download and install this from https://www.python.org/downloads/)
 	pip3 install requirements.txt
@@ -13,7 +20,7 @@ To generate the resources file for the Connect API:
    ca2dita.py
    processtext.pl
 
-3) To run:
+## RUN
    python3 ca2dita.py -s (specFilename)
    Example
    `python3 ca2dita.py -s cdp-connect-api-RAML-59.0.raml`

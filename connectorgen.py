@@ -7,21 +7,16 @@
 #example: python3 connectorgen.py  -t c360_a_connector_.xml
 # -cc lets you process json files from the config directory
 
-# example python3 test1.py -s cdp-connect-api-RAML-59.0.raml
-import yaml
-import xmltodict
 import os
 import glob
 import sys
 from pprint import pprint
 from pandas import json_normalize
 from os import getcwd, path
-from yaml import SafeLoader, load
 import re #regular expressions
 import argparse
 import json
 import subprocess
-import shlex
 import re
 import configparser
 
@@ -36,10 +31,11 @@ args = argParser.parse_args()
 #print("args.templateFile=%s" % args.templateFile) 
 #print("args.configDir=%s" % args.configDir) 
 #/Users/tavery/data-connectors-plugins/data-connectors-cdata-jdbc/src/main/resources/ConnectionDefinition
-
+homepath = os.path.expanduser('~')
+#print("homepath=%s" % homepath)
 #if you just want to specify the connector group
 if args.type == "standard": 
-	configPath = "/Users/tavery/data-connectors-plugins/%s/src/main/resources/ConnectionDefinition" % args.configDir
+	configPath = f"{homepath}/data-connectors-plugins/{args.configDir}/src/main/resources/ConnectionDefinition"
 	print(f"configPath={configPath}")
 #if you just want to use a handful of custom configs, you can put them in the config directory
 else:

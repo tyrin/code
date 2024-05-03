@@ -1,0 +1,2 @@
+All git folders need to have at least one file, so this readme is included for that purpose.
+This folder is used for input files used by your script utility. Do not commit any additional files to the repo from this folder.

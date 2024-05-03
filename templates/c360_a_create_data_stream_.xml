@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="c360_a_create_data_stream_{name}" xml:lang="en-us">
+ <title>Create a(n) {label} Data Stream (Beta)</title>
+ <!--Populated from the json file stored in your local repository.-->
+ <?Pub /template?>
+ <shortdesc>Create a data stream to start the flow of data from your {label} source to create a data
+    lake object (DLO) in <ph keyref="productname"/>.</shortdesc>
+ <prolog>
+  <metadata>
+   <othermeta content="task" name="topic_type"/>
+   <othermeta content="Cross_Cloud" name="app_area"/>
+   <othermeta content="End_User Administrator" name="role"/>
+   <othermeta content="" name="edition"/>
+   <othermeta content="sfx" name="ui_platform"/>
+  </metadata>
+ </prolog>
+ <taskbody>
+  <prereq><?oxy_comment_start author="lng" timestamp="20240429T134632-0700" comment="Susan Oliver to draft up reusable content to reference Data Cloud Connector Team email alias."?><note
+    conref="../dev/doc/248/patch/core/en/xmlsource/resource_files/reusable_genie/reusable_genie_disclaimer.xml#reusable_genie_disclaimer/perm_set_names_table"
+   /><?oxy_comment_end?>Before you begin:<ul>
+    <li>Make sure the {label} connection is set up. For more information, see <xref
+      href="c360_a_set_up_postgresql_connection.xml" scope="local" otherprops="nopage"
+      type="reference" format="dita">Set Up a {label} Connection</xref>.</li>
+    <li>Get familiar with <xref href="c360_a_data_stream_edit_settings.xml" scope="local"
+      otherprops="nopage" type="reference" format="dita">Data Stream Edit Settings</xref>.</li>
+    <li>Review the <xref href="c360_a_data_cloud_ip_address_allowlist.xml" scope="local"
+      otherprops="nopage" type="reference" format="dita">IP Addresses Used by Data
+      Cloud Services</xref> to make sure the {label} connection has the necessary access.</li>
+   </ul></prereq>
+  <steps>
+   <step>
+    <cmd>In <ph keyref="productname"/>, on the <uicontrol>Data Streams </uicontrol>tab, click
+      <uicontrol>New</uicontrol>.</cmd>
+    <info>You can also use App Launcher to find and select <uicontrol>Data
+     Streams</uicontrol>.</info>
+   </step>
+   <step>
+    <cmd>Under Other Sources, select the {label} connection source, and click
+      <uicontrol>Next</uicontrol>.</cmd>
+   </step>
+   <step>
+    <cmd>Select from the available {label} connections.</cmd>
+   </step>
+   <step>
+    <cmd>Select the object that you want to import, and click <uicontrol>Next</uicontrol>.</cmd>
+    <info>You can select one new object on the Available Objects tab or an existing object on the In
+     Use Objects tab.</info>
+   </step>
+   <step>
+    <cmd>Under Object Details, for Category, identify the type of data in the data stream.</cmd>
+   </step>
+   <?oxy_comment_start author="lng" timestamp="20240429T113853-0700" comment="Change this to reusable content as this step will get updated in 252 or 254. Lyman will get more details on proposed design."?>
+   <step>
+    <cmd>For Primary Key, select a unique field to identify a record.</cmd>
+    <info>If a primary key isn’t listed in the dropdown, you must create one using a formula
+     field.</info>
+    <substeps>
+     <substep>
+      <cmd>To create a formula field, click <uicontrol>New Formula Field</uicontrol>.</cmd>
+     </substep>
+     <substep>
+      <cmd>For Field Label, enter the data stream field’s display name.</cmd>
+     </substep>
+     <substep>
+      <cmd>For Field API Name, enter the data stream field’s programmatic reference.</cmd>
+     </substep>
+     <substep>
+      <cmd>For Formula Return Type, select <uicontrol>Text</uicontrol>.</cmd>
+     </substep>
+     <substep>
+      <cmd>In the Transformation Formula text box, enter a UUID() formula.</cmd>
+     </substep>
+     <substep>
+      <cmd>To validate the formula, click <uicontrol>Text</uicontrol>.</cmd>
+     </substep>
+     <substep>
+      <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+     </substep>
+     <substep>
+      <cmd>For Primary Key, select the UUID that you created.</cmd>
+     </substep>
+    </substeps>
+   </step><?oxy_comment_end?>
+   <step>
+    <cmd>(Optional) Select a record modified field.</cmd>
+    <info>If data is received out of order, the record modified field provides a reference point to
+     determine whether to update the record. The record with the most up-to-date timestamp is
+     loaded.</info>
+   </step>
+   <step>
+    <cmd>(Optional) For Organization Unit Identifier, select a business unit to use in a record’s
+     data lineage.</cmd>
+   </step>
+   <step>
+    <cmd>Click <uicontrol>Next</uicontrol>.</cmd>
+   </step>
+   <step>
+    <cmd>For Data Space, if the default data space isn’t selected, assign the data stream to the
+     appropriate data space.</cmd>
+   </step>
+   <step>
+    <cmd>Click <uicontrol>Deploy</uicontrol>.</cmd>
+   </step>
+  </steps>
+  <result>When the Last Run Status displays success, you can see how many records were processed and
+   the total number of records that were loaded.<p>You can now map your newly created DLO to the
+    semantic data model to use the data in segments, calculated insights, and other use cases.
+    </p><p><!--Delete this section as needed. Be sure the limits/considerations are applicable as a part of the data stream creation for this specific connector.-->When
+    working with the {label} connector, keep these behaviors in mind. </p><?oxy_comment_start author="lng" timestamp="20240424T131456-0700" comment="This section will change based on the connector or it could be blank."?><ul>
+    <li>You can’t reuse an {label} source in multiple {label} connections in Data Cloud.</li>
+    <li>An {label} stream can contain only the type of data that’s selected when the data stream is
+     created. Any variation in data that doesn’t match the schema causes the data stream to
+     fail.</li>
+   </ul><?oxy_comment_end?></result>
+ </taskbody>
+</task>
+

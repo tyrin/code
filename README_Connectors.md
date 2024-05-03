@@ -1,5 +1,16 @@
 *CONNECTOR Generation utility*
+These instructions assume you're working on a mac.
 To generate files for the Connector Framework:
+
+## CLONE
+
+1) Clone the team repo into your home directory. If you're successful, the path to it is:
+   /Users/(yourname)/data-connectors-plugins
+2) Clone the code utilities repo into your home directory. If you're successful, the path to it is:
+   /Users/(yourname)/code
+
+## INSTALL
+
 1) Install:
 	python3 (you can download and install this from https://www.python.org/downloads/)
 	pip3 install requirements.txt
@@ -10,10 +21,11 @@ To generate files for the Connector Framework:
    |
    config (if you just want to generate a couple of new files, not everything in a folder)
    |
-   connectorgen.py - script to run with different arguments
    connect.sh - top level script for default values
+   connectorgen.py - script to run with different arguments
 
-3) To run with defaults:
+## RUN
+1) To run with defaults:
 	bash connect.sh
 	
 	To run with custom arguements
@@ -46,3 +58,6 @@ Syntax:
    		python3 connectorgen.py -t templatefile -tp custom -c data-connectors-athena-jdbc -cc ../../mycustomdir
    Example: 
     python3 connectorgen.py -t templatefile -tp custom -cc ../../mycustomdir
+    
+**What the script does**
+The script replaces the variables in a template with the top level variables. It also generates simple steps based on the ConnectorAttributes.     
