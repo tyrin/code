@@ -50,14 +50,6 @@ templatePath = "./templates/%s" % args.templateFile
 #logfile = open("./output/connectorlog.txt", "w")
 
 ############################# get json files #############################
-# to store files in a list
-#list = []
- 
-# dirs=directories
-#for (root, dirs, file) in os.walk(configPath):
-#		for f in file:
-#				if '.json' in f:
-#						print(f)
 						
 for filename in glob.glob(os.path.join(configPath, '*.json')): # get a list of all the json files in the folder
 	with open(os.path.join(os.getcwd(), filename), 'r') as f: # open each file in readonly mode
@@ -81,21 +73,21 @@ for filename in glob.glob(os.path.join(configPath, '*.json')): # get a list of a
 			if (conattr[i]["type"] == "custom") and (conattr[i]["dataType"] == "checkbox"):
 					#print ("Check the box")
 				boxname = conattr[i]["label"] 
-				step = f"<substep><cmd>Check the {boxname} values to use.</cmd></substep>"
+				step = f"<substep><cmd>Check the <uicontrol>{boxname}</uicontrol> values to use.</cmd></substep>"
 				steps += step
 			elif (conattr[i]["type"] == "custom") and (conattr[i]["dataType"] == "combobox"):
 					#print ("Check the box")
 				comboname = conattr[i]["label"] 
-				step = f"<substep><cmd>Select the {comboname} that you want to use.</cmd></substep>"
+				step = f"<substep><cmd>Select the <uicontrol>{comboname}</uicontrol> that you want to use.</cmd></substep>"
 				steps += step
 			#print(conattr[i]["name"])
 			elif 'label' in conattr[i]:
 				paramname = conattr[i]["label"]
-				step = f"<substep><cmd>Enter a {paramname} value.</cmd></substep>"
+				step = f"<substep><cmd>Enter a <uicontrol>{paramname}</uicontrol> value.</cmd></substep>"
 				steps += step
 			else:
 				typename = conattr[i]["type"]
-				step = f"<substep><cmd>Enter a {typename} value.</cmd></substep>"
+				step = f"<substep><cmd>Enter a <uicontrol>{typename}</uicontrol> value.</cmd></substep>"
 				steps += step
 		configdata["steps"] = steps #add the steps to the configdata dictionary
 		#print(steps)
@@ -105,16 +97,20 @@ for filename in glob.glob(os.path.join(configPath, '*.json')): # get a list of a
 		templatedata = templatefile.read()
 		templatefile.close()
 		
-		#print (templatedata)
 		#replace the variables in the template with the values from the json file dictionary
 		filedata = templatedata.format(**configdata) 
 		#print (filedata)
 		
 		#create the output file
-		#f = open('%s.csv' % outputfilename, 'wb')
 		tempname = os.path.splitext(args.templateFile)[0]
 		#print(tempname)
-		outputfilename = tempname + configdata["name"] 
+		if tempname.find("@"): #if the template file has an @ character in the name 
+			splitname = tempname.split("@") #setting the second parameter to one makes a max split of 2
+			#print(f"splitname={splitname}, split1={splitname[0]}, split2={splitname[1]},")
+			outputfilename = splitname[0] + configdata["name"] + splitname[1]
+		else:
+			outputfilename = tempname + configdata["name"] 
+		print(f"outputfilename={outputfilename}")
 		outputfile = open(".//output//%s.xml" % outputfilename, "w")
 		outputfile.write(filedata)
 
@@ -122,6 +118,6 @@ for filename in glob.glob(os.path.join(configPath, '*.json')): # get a list of a
 #logfile.close()
 
 #add in test for article ie a vs an
-#add in test for unresolved variables for file and throw error message to log
+#if there's an unresolved variable in the file, the script throws a "KeyError: 'name of variable" error.
 #get the root path for the repo to reference for the json files and update the args to allow you to pass in something else
 #split the template name and use it for the output files.
