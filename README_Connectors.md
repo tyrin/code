@@ -19,17 +19,24 @@ To generate files for the Connector Framework:
 	In terminal in home directory:
 	pip install certifi
 	if you already have certify installed, use: pip install --upgrade certifi
-2) Install pip
-	test if pip is installed 
-	which pip
-	if it isn't installed
-	sudo apt install python3-pip )
-	if this doesn't work, there are other ways to install - usually using brew
 	
-3) Install required modules
+2) Add python to your path. (Not: mac os has a really old version of python installed by default, but using this will cause problems)
+	a) In your home directory, create a text file called .bash_login
+		In terminal type:  
+		nano .bash_login
+		This command will open the .bash_login document (or create it if it doesn’t already exist) in the easiest to use text editor in Terminal – Nano.
+	b)Add the following to that file 
+		export PATH="/path/to/python:$PATH"
+	c)	In terminal type:  
+		nano .bash_profile 
+		Add this to the file:
+		source ~/.bash_login
+	d) to test this
+
+	
+3) Install pandas
 	In terminal:
-	cd /Users/(yourname)/code
-	pip install -r requirements.txt
+	pip3 install pandas
 	
 2) You need the following files and folders:
    templates (put the template for the file you want to generate in this folder)
@@ -45,7 +52,7 @@ To generate files for the Connector Framework:
 1) To run with defaults:
 	bash connect.sh
 	
-	To run with custom arguements
+	To run with custom arguments
 	 python3 connectorgen.py (arguments)
 	
      -t", "--templateFile" use to specify template file in templates directory",	default=c360_a_connector_.xml
